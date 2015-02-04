@@ -22,19 +22,11 @@
 //    SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "AGMappingPairCollection.h"
 
-@class AGMappingPair;
+@interface AGMappingPairArray : AGMappingPairCollection
 
-@interface AGMappingPairBuilder : NSObject
-
-@property (nonatomic, strong) NSDictionary* typesOfProperties;
-
-- (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
-                                        keyTo:(NSString*) keyTo;
-
-- (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
-                                        keyTo:(NSString*) keyTo
-                                         info:(NSString*) info;
+@{[@"id": @"iden",
+   @"date": @[@"date_cr", @"YYYY/mm/dd"]]}
 
 @end

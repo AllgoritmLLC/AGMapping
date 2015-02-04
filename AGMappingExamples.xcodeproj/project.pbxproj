@@ -18,6 +18,12 @@
 		BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028F1A826CA3004D7ABD /* AGMappingManager.m */; };
 		BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602981A826EC9004D7ABD /* AGMappingPair.m */; };
 		BA96029C1A827091004D7ABD /* AGMappingPairBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */; };
+		BA9602A41A82726B004D7ABD /* AGMappingPairNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */; };
+		BA9602A71A82727F004D7ABD /* AGMappingPairString.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A61A82727F004D7ABD /* AGMappingPairString.m */; };
+		BA9602AA1A8272BC004D7ABD /* AGMappingPairClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A91A8272BC004D7ABD /* AGMappingPairClass.m */; };
+		BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */; };
+		BA9602B01A8272D8004D7ABD /* AGMappingPairCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */; };
+		BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,18 @@
 		BA9602981A826EC9004D7ABD /* AGMappingPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPair.m; sourceTree = "<group>"; };
 		BA96029A1A827091004D7ABD /* AGMappingPairBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairBuilder.h; sourceTree = "<group>"; };
 		BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairBuilder.m; sourceTree = "<group>"; };
+		BA9602A21A82726B004D7ABD /* AGMappingPairNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairNumber.h; sourceTree = "<group>"; };
+		BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairNumber.m; sourceTree = "<group>"; };
+		BA9602A51A82727F004D7ABD /* AGMappingPairString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairString.h; sourceTree = "<group>"; };
+		BA9602A61A82727F004D7ABD /* AGMappingPairString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairString.m; sourceTree = "<group>"; };
+		BA9602A81A8272BC004D7ABD /* AGMappingPairClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairClass.h; sourceTree = "<group>"; };
+		BA9602A91A8272BC004D7ABD /* AGMappingPairClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairClass.m; sourceTree = "<group>"; };
+		BA9602AB1A8272C9004D7ABD /* AGMappingPairDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairDate.h; sourceTree = "<group>"; };
+		BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairDate.m; sourceTree = "<group>"; };
+		BA9602AE1A8272D8004D7ABD /* AGMappingPairCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairCollection.h; sourceTree = "<group>"; };
+		BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairCollection.m; sourceTree = "<group>"; };
+		BA9602B11A8272E8004D7ABD /* AGMappingPairArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairArray.h; sourceTree = "<group>"; };
+		BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +173,36 @@
 				BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */,
 				BA9602971A826EC9004D7ABD /* AGMappingPair.h */,
 				BA9602981A826EC9004D7ABD /* AGMappingPair.m */,
+				BA96029D1A827242004D7ABD /* AGMappingPairConcrete */,
 			);
 			path = AGMappingPair;
+			sourceTree = "<group>";
+		};
+		BA96029D1A827242004D7ABD /* AGMappingPairConcrete */ = {
+			isa = PBXGroup;
+			children = (
+				BA9602A21A82726B004D7ABD /* AGMappingPairNumber.h */,
+				BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */,
+				BA9602A51A82727F004D7ABD /* AGMappingPairString.h */,
+				BA9602A61A82727F004D7ABD /* AGMappingPairString.m */,
+				BA9602A81A8272BC004D7ABD /* AGMappingPairClass.h */,
+				BA9602A91A8272BC004D7ABD /* AGMappingPairClass.m */,
+				BA9602AB1A8272C9004D7ABD /* AGMappingPairDate.h */,
+				BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */,
+				BA9602AE1A8272D8004D7ABD /* AGMappingPairCollection.h */,
+				BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */,
+				BA96029E1A827242004D7ABD /* AGMappingPairCollection */,
+			);
+			path = AGMappingPairConcrete;
+			sourceTree = "<group>";
+		};
+		BA96029E1A827242004D7ABD /* AGMappingPairCollection */ = {
+			isa = PBXGroup;
+			children = (
+				BA9602B11A8272E8004D7ABD /* AGMappingPairArray.h */,
+				BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */,
+			);
+			path = AGMappingPairCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,11 +305,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */,
+				BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */,
 				BA96026A1A8239D8004D7ABD /* ViewController.m in Sources */,
+				BA9602A41A82726B004D7ABD /* AGMappingPairNumber.m in Sources */,
 				BA9602671A8239D8004D7ABD /* AppDelegate.m in Sources */,
+				BA9602B01A8272D8004D7ABD /* AGMappingPairCollection.m in Sources */,
+				BA9602A71A82727F004D7ABD /* AGMappingPairString.m in Sources */,
 				BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */,
 				BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */,
 				BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */,
+				BA9602AA1A8272BC004D7ABD /* AGMappingPairClass.m in Sources */,
 				BA96029C1A827091004D7ABD /* AGMappingPairBuilder.m in Sources */,
 				BA9602641A8239D8004D7ABD /* main.m in Sources */,
 			);

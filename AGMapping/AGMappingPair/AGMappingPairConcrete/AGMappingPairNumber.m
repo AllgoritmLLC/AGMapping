@@ -22,19 +22,8 @@
 //    SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "AGMappingPairNumber.h"
 
-@class AGMappingPair;
-
-@interface AGMappingPairBuilder : NSObject
-
-@property (nonatomic, strong) NSDictionary* typesOfProperties;
-
-- (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
-                                        keyTo:(NSString*) keyTo;
-
-- (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
-                                        keyTo:(NSString*) keyTo
-                                         info:(NSString*) info;
+@implementation AGMappingPairNumber
 
 @end
