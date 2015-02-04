@@ -24,6 +24,53 @@
 
 #import "NSObject+AGMapping.h"
 
+#import <objc/runtime.h>
+
 @implementation NSObject (AGMapping)
+
+#pragma mark - properties
+- (NSDictionary*) typesOfProperties {
+    
+    NSMutableDictionary* dictTypes = [NSMutableDictionary dictionary];
+    
+    unsigned int propCount;
+    objc_property_t *properties = class_copyPropertyList(self.class, &propCount);
+    
+    for (NSUInteger i = 0; i < propCount; i++) {
+        objc_property_t prop = properties[i];
+        NSString* propName = [NSString stringWithUTF8String:property_getName(prop)];
+        propName = [self stringByRemovingTrash:propName];
+        
+        unsigned int attrCount;
+        objc_property_attribute_t *attributes = property_copyAttributeList(prop, &attrCount);
+        
+        for (NSInteger j = 0; j < attrCount; j++) {
+            objc_property_attribute_t attr = attributes[j];
+            NSString* attrName = [NSString stringWithUTF8String:attr.name];
+            NSString* attrValue = [NSString stringWithUTF8String:attr.value];
+            
+            if ([attrName isEqualToString:@"T"] && attrValue.length) {
+                attrValue = [self stringByRemovingTrash:attrValue];
+                dictTypes[propName] = attrValue;
+                break;
+            }
+        }
+        free(attributes);
+    }
+    free(properties);
+    
+    return [NSDictionary dictionaryWithDictionary:dictTypes];
+}
+
+- (NSString*) stringByRemovingTrash:(NSString*)string {
+    if (string.length) {
+        return [string stringByReplacingOccurrencesOfString:@"\\W*(\\w*)\\W*"
+                                                 withString:@"$1"
+                                                    options:NSRegularExpressionSearch
+                                                      range:NSMakeRange(0, string.length)];
+    }else{
+        return @"";
+    }
+}
 
 @end
