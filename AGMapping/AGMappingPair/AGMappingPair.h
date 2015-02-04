@@ -31,6 +31,8 @@
 
 + (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                       keyTo:(NSString*) keyTo;
+- (instancetype) initWithKeyPathFrom:(NSString*) keyPathFrom
+                               keyTo:(NSString*) keyTo;
 
 - (void) mapValueFromJSONObject:(NSDictionary*) jsonObject
                        toObject:(NSObject*) object;

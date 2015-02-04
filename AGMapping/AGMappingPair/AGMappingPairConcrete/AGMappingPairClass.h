@@ -28,4 +28,8 @@
 
 @property (nonatomic, strong) NSString* className;
 
++ (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
+                                      keyTo:(NSString*) keyTo
+                                  className:(NSString*) className;
+
 @end

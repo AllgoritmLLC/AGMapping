@@ -24,8 +24,39 @@
 
 #import "AGMappingPairClass.h"
 
+#import "NSObject+AGMapping.h"
+
 @implementation AGMappingPairClass
 
++ (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
+                                      keyTo:(NSString*) keyTo
+                                  className:(NSString*) className {
+    return [[self alloc] initWithKeyPathFrom:keyPathFrom
+                                       keyTo:keyTo
+                                   className:className];
+}
 
+- (instancetype) initWithKeyPathFrom:(NSString*) keyPathFrom
+                               keyTo:(NSString*) keyTo
+                           className:(NSString*) className {
+    self = [super initWithKeyPathFrom:keyPathFrom
+                                keyTo:keyTo];
+    if (self) {
+        self.className = className;
+    }
+    return self;
+}
+
+#pragma mark - mapping
+- (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
+                       toObject:(NSObject *) object {
+    
+    NSDictionary* nestedJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (nestedJSON) {
+        NSObject* nestedObject = [NSClassFromString(self.className) objectMappedFromJSONObject:nestedJSON];
+        [object setValue:nestedObject
+              forKeyPath:self.keyTo];
+    }
+}
 
 @end
