@@ -15,6 +15,7 @@
 		BA9602721A8239D8004D7ABD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9602701A8239D8004D7ABD /* LaunchScreen.xib */; };
 		BA96027E1A8239D8004D7ABD /* AGMappingExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */; };
 		BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */; };
+		BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028F1A826CA3004D7ABD /* AGMappingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGMapping.h"; sourceTree = "<group>"; };
 		BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGMapping.m"; sourceTree = "<group>"; };
 		BA96028C1A826AF9004D7ABD /* AGMappableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappableObject.h; sourceTree = "<group>"; };
+		BA96028E1A826CA3004D7ABD /* AGMappingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingManager.h; sourceTree = "<group>"; };
+		BA96028F1A826CA3004D7ABD /* AGMappingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +135,18 @@
 				BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */,
 				BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */,
 				BA96028C1A826AF9004D7ABD /* AGMappableObject.h */,
+				BA96028D1A826B8D004D7ABD /* AGMappingPair */,
 			);
 			path = AGMapping;
+			sourceTree = "<group>";
+		};
+		BA96028D1A826B8D004D7ABD /* AGMappingPair */ = {
+			isa = PBXGroup;
+			children = (
+				BA96028E1A826CA3004D7ABD /* AGMappingManager.h */,
+				BA96028F1A826CA3004D7ABD /* AGMappingManager.m */,
+			);
+			path = AGMappingPair;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +252,7 @@
 				BA96026A1A8239D8004D7ABD /* ViewController.m in Sources */,
 				BA9602671A8239D8004D7ABD /* AppDelegate.m in Sources */,
 				BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */,
+				BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */,
 				BA9602641A8239D8004D7ABD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
