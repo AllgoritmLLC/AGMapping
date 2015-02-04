@@ -26,4 +26,52 @@
 
 @implementation AGMappingPairDate
 
++ (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
+                                      keyTo:(NSString*) keyTo
+                                 dateFormat:(NSString*) dateFormat {
+    return [[self alloc] initWithKeyPathFrom:keyPathFrom
+                                       keyTo:keyTo
+                                   dateFormat:dateFormat];
+}
+
+- (instancetype) initWithKeyPathFrom:(NSString*) keyPathFrom
+                               keyTo:(NSString*) keyTo
+                          dateFormat:(NSString*) dateFormat {
+    self = [super initWithKeyPathFrom:keyPathFrom
+                                keyTo:keyTo];
+    if (self) {
+        self.dateFormat = dateFormat;
+    }
+    return self;
+}
+
+#pragma mark - mapping
+- (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
+                       toObject:(NSObject *) object {
+    
+    id valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (valueJSON) {
+        NSDate* date = nil;
+        if ([valueJSON isKindOfClass:[NSNumber class]]) {
+            date = [NSDate dateWithTimeIntervalSince1970:[valueJSON doubleValue]];
+            
+        }else if ([valueJSON isKindOfClass:[NSString class]]) {
+            static NSDateFormatter* __dateFormatter = nil;
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                __dateFormatter = [NSDateFormatter new];
+            });
+            if (self.dateFormat) {
+                __dateFormatter.dateFormat = self.dateFormat;
+            }
+            date = [__dateFormatter dateFromString:valueJSON];
+        }
+        
+        if (date) {
+            [object setValue:date
+                  forKeyPath:self.keyTo];
+        }
+    }
+}
+
 @end

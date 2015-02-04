@@ -26,4 +26,6 @@
 
 @interface AGMappingPairDate : AGMappingPair
 
+@property (nonatomic, strong) NSString* dateFormat;
+
 @end
