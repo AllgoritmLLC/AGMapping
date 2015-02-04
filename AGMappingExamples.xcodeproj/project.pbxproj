@@ -16,6 +16,7 @@
 		BA96027E1A8239D8004D7ABD /* AGMappingExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */; };
 		BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */; };
 		BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028F1A826CA3004D7ABD /* AGMappingManager.m */; };
+		BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602981A826EC9004D7ABD /* AGMappingPair.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		BA96028C1A826AF9004D7ABD /* AGMappableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappableObject.h; sourceTree = "<group>"; };
 		BA96028E1A826CA3004D7ABD /* AGMappingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingManager.h; sourceTree = "<group>"; };
 		BA96028F1A826CA3004D7ABD /* AGMappingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingManager.m; sourceTree = "<group>"; };
+		BA9602971A826EC9004D7ABD /* AGMappingPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPair.h; sourceTree = "<group>"; };
+		BA9602981A826EC9004D7ABD /* AGMappingPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPair.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 			children = (
 				BA96028E1A826CA3004D7ABD /* AGMappingManager.h */,
 				BA96028F1A826CA3004D7ABD /* AGMappingManager.m */,
+				BA9602971A826EC9004D7ABD /* AGMappingPair.h */,
+				BA9602981A826EC9004D7ABD /* AGMappingPair.m */,
 			);
 			path = AGMappingPair;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				BA9602671A8239D8004D7ABD /* AppDelegate.m in Sources */,
 				BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */,
 				BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */,
+				BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */,
 				BA9602641A8239D8004D7ABD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
