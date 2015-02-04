@@ -14,6 +14,7 @@
 		BA96026F1A8239D8004D7ABD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA96026E1A8239D8004D7ABD /* Images.xcassets */; };
 		BA9602721A8239D8004D7ABD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9602701A8239D8004D7ABD /* LaunchScreen.xib */; };
 		BA96027E1A8239D8004D7ABD /* AGMappingExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */; };
+		BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		BA9602771A8239D8004D7ABD /* AGMappingExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGMappingExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA96027C1A8239D8004D7ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGMappingExamplesTests.m; sourceTree = "<group>"; };
+		BA9602881A823D41004D7ABD /* AGMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGMapping.h; sourceTree = "<group>"; };
+		BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGMapping.h"; sourceTree = "<group>"; };
+		BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGMapping.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		BA9602551A8239D8004D7ABD = {
 			isa = PBXGroup;
 			children = (
+				BA9602871A823D34004D7ABD /* AGMapping */,
 				BA9602601A8239D8004D7ABD /* AGMappingExamples */,
 				BA96027A1A8239D8004D7ABD /* AGMappingExamplesTests */,
 				BA96025F1A8239D8004D7ABD /* Products */,
@@ -117,6 +122,16 @@
 				BA96027C1A8239D8004D7ABD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA9602871A823D34004D7ABD /* AGMapping */ = {
+			isa = PBXGroup;
+			children = (
+				BA9602881A823D41004D7ABD /* AGMapping.h */,
+				BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */,
+				BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */,
+			);
+			path = AGMapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +236,7 @@
 			files = (
 				BA96026A1A8239D8004D7ABD /* ViewController.m in Sources */,
 				BA9602671A8239D8004D7ABD /* AppDelegate.m in Sources */,
+				BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */,
 				BA9602641A8239D8004D7ABD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +430,7 @@
 				BA9602831A8239D8004D7ABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA9602841A8239D8004D7ABD /* Build configuration list for PBXNativeTarget "AGMappingExamplesTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +439,7 @@
 				BA9602861A8239D8004D7ABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
