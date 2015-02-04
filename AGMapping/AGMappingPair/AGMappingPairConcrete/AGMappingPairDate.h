@@ -22,8 +22,8 @@
 //    SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "AGMappingPair.h"
 
-@interface AGMappingPairDate : NSObject
+@interface AGMappingPairDate : AGMappingPair
 
 @end

@@ -22,8 +22,10 @@
 //    SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "AGMappingPair.h"
 
-@interface AGMappingPairClass : NSObject
+@interface AGMappingPairClass : AGMappingPair
+
+@property (nonatomic, strong) NSString* className;
 
 @end
