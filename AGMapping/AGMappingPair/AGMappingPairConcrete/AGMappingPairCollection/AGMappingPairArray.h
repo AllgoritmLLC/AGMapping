@@ -26,7 +26,6 @@
 
 @interface AGMappingPairArray : AGMappingPairCollection
 
-@{[@"id": @"iden",
-   @"date": @[@"date_cr", @"YYYY/mm/dd"]]}
+
 
 @end

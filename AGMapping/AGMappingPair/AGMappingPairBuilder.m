@@ -24,7 +24,11 @@
 
 #import "AGMappingPairBuilder.h"
 
-#import "AGMappingPair.h"
+#import "AGMappingPairNumber.h"
+#import "AGMappingPairString.h"
+#import "AGMappingPairDate.h"
+#import "AGMappingPairClass.h"
+#import "AGMappingPairArray.h"
 
 @implementation AGMappingPairBuilder
 
