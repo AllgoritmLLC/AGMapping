@@ -44,6 +44,7 @@
 		BA9602881A823D41004D7ABD /* AGMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGMapping.h; sourceTree = "<group>"; };
 		BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGMapping.h"; sourceTree = "<group>"; };
 		BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGMapping.m"; sourceTree = "<group>"; };
+		BA96028C1A826AF9004D7ABD /* AGMappableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappableObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +131,7 @@
 				BA9602881A823D41004D7ABD /* AGMapping.h */,
 				BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */,
 				BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */,
+				BA96028C1A826AF9004D7ABD /* AGMappableObject.h */,
 			);
 			path = AGMapping;
 			sourceTree = "<group>";

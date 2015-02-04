@@ -25,6 +25,7 @@
 #ifndef AGMappingExamples_AGMapping_h
 #define AGMappingExamples_AGMapping_h
 
-
+#import "NSObject+AGMapping.h"
+#import "AGMappableObject.h"
 
 #endif
