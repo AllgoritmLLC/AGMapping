@@ -28,6 +28,23 @@
 
 @implementation NSObject (AGMapping)
 
++ (instancetype) objectMappedFromJSONObject:(NSDictionary*) jsonObject {
+    return [[self alloc] initWithJSONObject:jsonObject];
+}
+
+- (instancetype) initWithJSONObject:(NSDictionary*) jsonObject {
+    self = [self init];
+    if (self) {
+        [self mapValuesFromJSONObject:jsonObject];
+    }
+    return self;
+}
+
+#pragma mark - mapping
+- (void) mapValuesFromJSONObject:(NSDictionary*) jsonObject {
+    
+}
+
 #pragma mark - properties
 - (NSDictionary*) typesOfProperties {
     

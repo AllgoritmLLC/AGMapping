@@ -26,7 +26,10 @@
 
 @interface NSObject (AGMapping)
 
++ (instancetype) objectMappedFromJSONObject:(NSDictionary*) jsonObject;
 
+#pragma mark - mapping
+- (void) mapValuesFromJSONObject:(NSDictionary*) jsonObject;
 
 
 
