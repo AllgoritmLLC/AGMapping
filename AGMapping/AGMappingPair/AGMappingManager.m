@@ -114,13 +114,13 @@
 
 - (void) validateMappingOfClass:(Class)objectClass
                      Dictionary:(NSDictionary*) dictMapping {
-    for (id keyFrom in dictMapping) {
-        if ([keyFrom isKindOfClass:[NSString class]] == NO) {
+    for (id keyPathFrom in dictMapping) {
+        if ([keyPathFrom isKindOfClass:[NSString class]] == NO) {
             @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass
-                                                                                   keyFrom:keyFrom];
+                                                                               keyPathFrom:keyPathFrom];
         }
         
-        id keyTo = dictMapping[keyFrom];
+        id keyTo = dictMapping[keyPathFrom];
         if ([keyTo isKindOfClass:[NSString class]] == NO &&
             [keyTo isKindOfClass:[NSArray class]] == NO) {
             @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass

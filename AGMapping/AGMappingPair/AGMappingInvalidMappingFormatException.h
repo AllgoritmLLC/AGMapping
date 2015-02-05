@@ -11,7 +11,7 @@
 @interface AGMappingInvalidMappingFormatException : VBException
 
 + (instancetype) exceptionWithMappingObjectClass:(Class) objectClass
-                                         keyFrom:(id) keyFrom;
+                                     keyPathFrom:(id) keyPathFrom;
 
 + (instancetype) exceptionWithMappingObjectClass:(Class) objectClass
                                            keyTo:(id) keyTo;

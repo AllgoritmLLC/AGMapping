@@ -11,14 +11,14 @@
 @implementation AGMappingInvalidMappingFormatException
 
 + (instancetype) exceptionWithMappingObjectClass:(Class) objectClass
-                                         keyFrom:(id) keyFrom {
+                                     keyPathFrom:(id) keyPathFrom {
     NSString* objectClassName = NSStringFromClass(objectClass);
-    NSString* keyFromClassName = NSStringFromClass([keyFrom class]);
+    NSString* keyFromClassName = NSStringFromClass([keyPathFrom class]);
     
     return [self exceptionWithReason:
-            [NSString stringWithFormat:@"Exception while using mapping of class %@. All JSON keysFrom must be of NSString class. Key %@ is of %@ class",
+            [NSString stringWithFormat:@"Exception while using mapping of class %@. All JSON keyPathFrom-s must be of NSString class. Key %@ is of %@ class",
              NSStringFromClass(objectClass),
-             keyFrom,
+             keyPathFrom,
              keyFromClassName]
                             userInfo:@{@"objectClassName":  objectClassName,
                                        @"keyFromClassName": keyFromClassName}];
@@ -30,7 +30,7 @@
     NSString* keyToClassName = NSStringFromClass([keyTo class]);
     
     return [self exceptionWithReason:
-            [NSString stringWithFormat:@"Exception while using mapping of class %@. All JSON keysTo must be of NSString or NSArray<NSString> class. Key %@ is of %@ class",
+            [NSString stringWithFormat:@"Exception while using mapping of class %@. All JSON keyTo-s must be of NSString or NSArray<NSString> class. Key %@ is of %@ class",
              NSStringFromClass(objectClass),
              keyTo,
              keyToClassName]
@@ -44,7 +44,7 @@
     NSString* keyToEntryClassName = NSStringFromClass([keyToEntry class]);
     
     return [self exceptionWithReason:
-            [NSString stringWithFormat:@"Exception while using mapping of class %@. All JSON keysTo entries must be of NSString. Entry %@ is of %@ class",
+            [NSString stringWithFormat:@"Exception while using mapping of class %@. All JSON keysTo-s entries must be of NSString. Entry %@ is of %@ class",
              NSStringFromClass(objectClass),
              keyToEntry,
              keyToEntryClassName]
