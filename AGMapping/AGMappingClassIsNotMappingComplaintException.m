@@ -8,6 +8,8 @@
 
 #import "AGMappingClassIsNotMappingComplaintException.h"
 
+#import "AGMappingProtocol.h"
+
 @implementation AGMappingClassIsNotMappingComplaintException
 
 + (instancetype) exception {
@@ -19,7 +21,13 @@
 }
 
 + (instancetype) exceptionWithClassName:(NSString*) className {
-    return [self exceptionWithReason:[NSString stringWithFormat:@"Class %@ does not conform protocol AGMappingProtocol. To create object of this class from JSON using AGMapping, implement AGMappingProtocol.", className]
+    return [self exceptionWithReason:
+
+            [NSString stringWithFormat:@"Class %@ does not conform protocol %@. To create object of this class from JSON using AGMapping, implement %@.",
+             className,
+             NSStringFromProtocol(@protocol(AGMappingProtocol)),
+             NSStringFromProtocol(@protocol(AGMappingProtocol))]
+            
                             userInfo:@{@"className": className}];
 }
 
