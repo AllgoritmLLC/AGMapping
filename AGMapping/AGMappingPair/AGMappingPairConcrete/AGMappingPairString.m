@@ -35,8 +35,8 @@
         NSString* string = [self.class objectWithJSONValue:jsonValue];
         
         if (string) {
-            [self setValue:string
-                forKeyPath:self.keyTo];
+            [object setValue:string
+                  forKeyPath:self.keyTo];
         }
     }
 }
