@@ -26,4 +26,34 @@
 
 @implementation AGMappingPairNumber
 
+#pragma mark - mapping
+- (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
+                       toObject:(NSObject *) object {
+    
+    id valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (valueJSON) {
+        NSNumber* number = nil;
+        
+        if ([valueJSON isKindOfClass:[NSNumber class]]) {
+            number = valueJSON;
+            
+        }else if ([valueJSON isKindOfClass:[NSNull class]]) {
+            number = nil;
+            
+        }else if ([valueJSON isKindOfClass:[NSString class]]) {
+            if ([valueJSON containsString:@"."]) {
+                number = @([valueJSON doubleValue]);
+            }else{
+                number = @([valueJSON integerValue]);
+            }
+            
+        }
+        
+        if (number) {
+            [self setValue:number
+                forKeyPath:self.keyTo];
+        }
+    }
+}
+
 @end
