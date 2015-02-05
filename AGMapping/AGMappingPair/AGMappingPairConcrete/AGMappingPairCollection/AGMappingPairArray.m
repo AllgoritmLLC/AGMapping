@@ -48,7 +48,7 @@
         if (array.count == 0) {
             array = nil;
         }
-        [object setValue:array
+        [object setValue:[NSArray arrayWithArray:array]
               forKeyPath:self.keyTo];
     }
 }
