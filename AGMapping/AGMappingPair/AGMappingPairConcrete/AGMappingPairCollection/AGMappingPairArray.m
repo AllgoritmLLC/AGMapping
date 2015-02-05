@@ -26,6 +26,10 @@
 
 #import "NSObject+AGMapping.h"
 
+#import "AGMappingPairString.h"
+#import "AGMappingPairNumber.h"
+#import "AGMappingPairDate.h"
+
 @implementation AGMappingPairArray
 
 #pragma mark - mapping
@@ -38,8 +42,21 @@
 
         for (NSInteger i = 0; i < valueJSON.count; i++) {
             id arrayEntry = valueJSON[i];
+            NSObject* obj = nil;
             
-            NSObject* obj = [self.entryClass objectMappedFromJSONObject:arrayEntry];
+            if (self.entryClass == [NSString class]) {
+                obj = [AGMappingPairString objectWithJSONValue:arrayEntry];
+
+            }else if (self.entryClass == [NSNumber class]) {
+                obj = [AGMappingPairNumber objectWithJSONValue:arrayEntry];
+
+            }else if (self.entryClass == [NSDate class]) {
+                obj = [AGMappingPairDate objectWithJSONValue:arrayEntry];
+                
+            }else{
+                obj = [self.entryClass objectMappedFromJSONObject:arrayEntry];
+            }
+            
             if (obj) {
                 [array addObject:obj];
             }

@@ -49,22 +49,14 @@
 - (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
                        toObject:(NSObject *) object {
     
-    id valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
-    if (valueJSON) {
+    id jsonValue = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (jsonValue) {
         NSDate* date = nil;
-        if ([valueJSON isKindOfClass:[NSNumber class]]) {
-            date = [NSDate dateWithTimeIntervalSince1970:[valueJSON doubleValue]];
-            
-        }else if ([valueJSON isKindOfClass:[NSString class]]) {
-            static NSDateFormatter* __dateFormatter = nil;
-            static dispatch_once_t onceToken;
-            dispatch_once(&onceToken, ^{
-                __dateFormatter = [NSDateFormatter new];
-            });
-            if (self.dateFormat) {
-                __dateFormatter.dateFormat = self.dateFormat;
-            }
-            date = [__dateFormatter dateFromString:valueJSON];
+        if (self.dateFormat) {
+            [self.class objectWithJSONValue:jsonValue
+                                 dateFormat:self.dateFormat];
+        }else{
+            [self.class objectWithJSONValue:jsonValue];
         }
         
         if (date) {
@@ -72,6 +64,29 @@
                   forKeyPath:self.keyTo];
         }
     }
+}
+
++ (id) objectWithJSONValue:(id)jsonValue {
+    NSDate* date = nil;
+    if ([jsonValue isKindOfClass:[NSNumber class]] || [jsonValue isKindOfClass:[NSString class]]) {
+        date = [NSDate dateWithTimeIntervalSince1970:[jsonValue doubleValue]];
+    }
+    return date;
+}
+
++ (id) objectWithJSONValue:(id)jsonValue
+                dateFormat:(NSString*)dateFormat {
+    NSDate* date = nil;
+    if ([jsonValue isKindOfClass:[NSString class]]) {
+        static NSDateFormatter* __dateFormatter = nil;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            __dateFormatter = [NSDateFormatter new];
+        });
+        __dateFormatter.dateFormat = dateFormat;
+        date = [__dateFormatter dateFromString:jsonValue];
+    }
+    return date;
 }
 
 @end

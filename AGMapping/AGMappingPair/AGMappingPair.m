@@ -24,6 +24,8 @@
 
 #import "AGMappingPair.h"
 
+#import "VBNotImplementedException.h"
+
 @implementation AGMappingPair
 
 + (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
@@ -47,6 +49,10 @@
 
     [object setValue:[jsonObject valueForKeyPath:self.keyPathFrom]
           forKeyPath:self.keyTo];
+}
+
++ (id) objectWithJSONValue:(id)jsonValue {
+    @throw [VBNotImplementedException exception];
 }
 
 @end

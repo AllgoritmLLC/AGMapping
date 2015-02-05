@@ -32,4 +32,7 @@
                                       keyTo:(NSString*) keyTo
                                  dateFormat:(NSString*) dateFormat;
 
++ (id) objectWithJSONValue:(id)jsonValue
+                dateFormat:(NSString*)dateFormat;
+
 @end

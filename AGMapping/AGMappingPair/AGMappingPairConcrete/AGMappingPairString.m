@@ -30,26 +30,31 @@
 - (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
                        toObject:(NSObject *) object {
     
-    id valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
-    if (valueJSON) {
-        NSString* string = nil;
-        
-        if ([valueJSON isKindOfClass:[NSString class]]) {
-            string = [NSString stringWithString:valueJSON];
-
-        }else if ([valueJSON isKindOfClass:[NSNull class]]) {
-            string = nil;
-            
-        }else if ([valueJSON isKindOfClass:[NSString class]] == NO) {
-            string = [NSString stringWithFormat:@"%@", valueJSON];
-
-        }
+    id jsonValue = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (jsonValue) {
+        NSString* string = [self.class objectWithJSONValue:jsonValue];
         
         if (string) {
             [self setValue:string
                 forKeyPath:self.keyTo];
         }
     }
+}
+
++ (id) objectWithJSONValue:(id)jsonValue {
+    NSString* string = nil;
+    
+    if ([jsonValue isKindOfClass:[NSString class]]) {
+        string = [NSString stringWithString:jsonValue];
+        
+    }else if ([jsonValue isKindOfClass:[NSNull class]]) {
+        string = nil;
+        
+    }else if ([jsonValue isKindOfClass:[NSString class]] == NO) {
+        string = [NSString stringWithFormat:@"%@", jsonValue];
+        
+    }
+    return string;
 }
 
 @end

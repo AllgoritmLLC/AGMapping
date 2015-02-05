@@ -37,4 +37,6 @@
 - (void) mapValueFromJSONObject:(NSDictionary*) jsonObject
                        toObject:(NSObject*) object;
 
++ (id) objectWithJSONValue:(id)jsonValue;
+
 @end

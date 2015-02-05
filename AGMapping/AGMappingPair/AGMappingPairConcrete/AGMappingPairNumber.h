@@ -26,4 +26,5 @@
 
 @interface AGMappingPairNumber : AGMappingPair
 
+
 @end

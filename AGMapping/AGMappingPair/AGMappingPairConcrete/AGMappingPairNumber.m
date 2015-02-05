@@ -30,21 +30,21 @@
 - (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
                        toObject:(NSObject *) object {
     
-    id valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
-    if (valueJSON) {
-        NSNumber* number = nil;
+    id jsonValue = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (jsonValue) {
+        NSNumber* number = [self.class objectWithJSONValue:object];
         
-        if ([valueJSON isKindOfClass:[NSNumber class]]) {
-            number = valueJSON;
+        if ([jsonValue isKindOfClass:[NSNumber class]]) {
+            number = jsonValue;
             
-        }else if ([valueJSON isKindOfClass:[NSNull class]]) {
+        }else if ([jsonValue isKindOfClass:[NSNull class]]) {
             number = nil;
             
-        }else if ([valueJSON isKindOfClass:[NSString class]]) {
-            if ([valueJSON containsString:@"."]) {
-                number = @([valueJSON doubleValue]);
+        }else if ([jsonValue isKindOfClass:[NSString class]]) {
+            if ([jsonValue containsString:@"."]) {
+                number = @([jsonValue doubleValue]);
             }else{
-                number = @([valueJSON integerValue]);
+                number = @([jsonValue integerValue]);
             }
             
         }
@@ -54,6 +54,27 @@
                 forKeyPath:self.keyTo];
         }
     }
+}
+
++ (id) objectWithJSONValue:(id)jsonValue {
+    NSNumber* number = nil;
+    
+    if ([jsonValue isKindOfClass:[NSNumber class]]) {
+        number = jsonValue;
+        
+    }else if ([jsonValue isKindOfClass:[NSNull class]]) {
+        number = nil;
+        
+    }else if ([jsonValue isKindOfClass:[NSString class]]) {
+        if ([jsonValue containsString:@"."]) {
+            number = @([jsonValue doubleValue]);
+        }else{
+            number = @([jsonValue integerValue]);
+        }
+        
+    }
+    
+    return number;
 }
 
 @end
