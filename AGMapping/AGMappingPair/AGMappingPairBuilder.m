@@ -79,17 +79,34 @@
                                                          keyTo:keyTo];
 
     }else if ([keyToPropertyType isEqualToString:@"NSDate"]) {
-        pair = [AGMappingPairDate mappingPairWithKeyPathFrom:keyPathFrom
-                                                       keyTo:keyTo];
+        if (params.count == 1) {
+            pair = [AGMappingPairDate mappingPairWithKeyPathFrom:keyPathFrom
+                                                           keyTo:keyTo
+                                                      dateFormat:params[0]];
+        }else{
+            pair = [AGMappingPairDate mappingPairWithKeyPathFrom:keyPathFrom
+                                                           keyTo:keyTo];
+        }
 
     }else if ([keyToPropertyType isEqualToString:@"NSArray"]) {
-        pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
-                                                        keyTo:keyTo];
+        if (params.count == 1) {
+            pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
+                                                            keyTo:keyTo
+                                                   entryClassName:params[0]];
+        }else{
+            pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
+                                                            keyTo:keyTo];
+        }
         
     }else {
-        pair = [AGMappingPairClass mappingPairWithKeyPathFrom:keyPathFrom
-                                                        keyTo:keyTo];
-        
+        if (params.count == 1) {
+            pair = [AGMappingPairClass mappingPairWithKeyPathFrom:keyPathFrom
+                                                            keyTo:keyTo
+                                                        className:params[0]];
+        }else{
+            pair = [AGMappingPairClass mappingPairWithKeyPathFrom:keyPathFrom
+                                                            keyTo:keyTo];
+        }
     }
     
     return pair;
