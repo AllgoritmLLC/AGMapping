@@ -30,6 +30,8 @@
 #import "AGMappingPairClass.h"
 #import "AGMappingPairArray.h"
 
+#import "AGMappingUndefinedObjectPropertyException.h"
+
 @implementation AGMappingPairBuilder
 
 + (instancetype) builderWithTypesOfProperties:(NSDictionary*) typesOfProperties {
@@ -55,6 +57,13 @@
 - (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                         keyTo:(NSString*) keyTo
                                        params:(NSArray*) params {
+    
+    NSString* keyToPropertyType = self.typesOfProperties[keyTo];
+    if (keyToPropertyType == nil) {
+        @throw [AGMappingUndefinedObjectPropertyException exceptionWithObjectClass:[self class]
+                                                                      propertyName:keyTo];
+    }
+    
     return nil;
 }
 
