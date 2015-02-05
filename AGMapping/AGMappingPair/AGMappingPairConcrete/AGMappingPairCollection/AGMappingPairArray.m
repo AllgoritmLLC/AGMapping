@@ -51,7 +51,12 @@
                 obj = [AGMappingPairNumber objectWithJSONValue:arrayEntry];
 
             }else if (self.entryClass == [NSDate class]) {
-                obj = [AGMappingPairDate objectWithJSONValue:arrayEntry];
+                if (self.entryClassInfo) {
+                    obj = [AGMappingPairDate objectWithJSONValue:arrayEntry
+                                                      dateFormat:self.entryClassInfo];
+                }else{
+                    obj = [AGMappingPairDate objectWithJSONValue:arrayEntry];
+                }
                 
             }else{
                 obj = [self.entryClass objectMappedFromJSONObject:arrayEntry];

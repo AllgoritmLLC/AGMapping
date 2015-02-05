@@ -93,6 +93,12 @@
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
                                                             keyTo:keyTo
                                                    entryClassName:params[0]];
+        }else if (params.count == 2) {
+            pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
+                                                            keyTo:keyTo
+                                                   entryClassName:params[0]
+                                                   entryClassInfo:params[1]];
+            
         }else{
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
                                                             keyTo:keyTo];

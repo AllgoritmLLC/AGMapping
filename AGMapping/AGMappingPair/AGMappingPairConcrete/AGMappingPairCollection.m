@@ -36,18 +36,31 @@
 + (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                       keyTo:(NSString*) keyTo
                              entryClassName:(NSString*) entryClassName {
+    return [self mappingPairWithKeyPathFrom:keyPathFrom
+                                       keyTo:keyTo
+                              entryClassName:entryClassName
+                             entryClassInfo:nil];
+}
+
++ (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
+                                      keyTo:(NSString*) keyTo
+                             entryClassName:(NSString*) entryClassName
+                             entryClassInfo:(NSString*) entryClassInfo{
     return [[self alloc] initWithKeyPathFrom:keyPathFrom
                                        keyTo:keyTo
-                              entryClassName:entryClassName];
+                              entryClassName:entryClassName
+                              entryClassInfo:entryClassInfo];
 }
 
 - (instancetype) initWithKeyPathFrom:(NSString*) keyPathFrom
                                keyTo:(NSString*) keyTo
-                      entryClassName:(NSString*) entryClassName {
+                      entryClassName:(NSString*) entryClassName
+                      entryClassInfo:(NSString*) entryClassInfo{
     self = [super initWithKeyPathFrom:keyPathFrom
                                 keyTo:keyTo];
     if (self) {
         self.entryClassName = entryClassName;
+        self.entryClassInfo = entryClassInfo;
     }
     return self;
 }

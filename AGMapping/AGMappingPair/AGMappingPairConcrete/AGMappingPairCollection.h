@@ -27,11 +27,17 @@
 @interface AGMappingPairCollection : AGMappingPair
 
 @property (nonatomic, strong) NSString* entryClassName;
+@property (nonatomic, strong) NSString* entryClassInfo;
 
 @property (nonatomic, weak, readonly) Class entryClass;
 
 + (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                       keyTo:(NSString*) keyTo
                              entryClassName:(NSString*) entryClassName;
+
++ (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
+                                      keyTo:(NSString*) keyTo
+                             entryClassName:(NSString*) entryClassName
+                             entryClassInfo:(NSString*) entryClassInfo;
 
 @end
