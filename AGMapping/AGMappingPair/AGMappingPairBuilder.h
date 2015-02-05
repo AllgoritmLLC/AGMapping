@@ -30,6 +30,8 @@
 
 @property (nonatomic, strong) NSDictionary* typesOfProperties;
 
++ (instancetype) builderWithTypesOfProperties:(NSDictionary*) typesOfProperties;
+
 - (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                         keyTo:(NSString*) keyTo;
 

@@ -24,13 +24,15 @@
 
 #import "AGMappingManager.h"
 
-#import "AGMappingClassIsNotMappingComplaintException.h"
-
+#import "NSObject+AGMapping.h"
 #import "AGMappingProtocol.h"
+
+#import "AGMappingClassIsNotMappingComplaintException.h"
+#import "AGMappingPairBuilder.h"
 
 @interface AGMappingManager ()
 
-@property (nonatomic, strong) NSMutableDictionary* mappingByClassName;
+@property (nonatomic, strong) NSMutableDictionary* mappingPairsByClassName;
 
 @end
 
@@ -48,30 +50,62 @@
 - (instancetype) init {
     self = [super init];
     if (self) {
-        self.mappingByClassName = [NSMutableDictionary new];
+        self.mappingPairsByClassName = [NSMutableDictionary new];
     }
     return self;
 }
 
 #pragma mark - mapping
-- (NSArray*) mappingForClass:(Class)objectClass {
+- (NSArray*) mappingPairsForClass:(Class)objectClass {
     
-    NSArray* mapping = self.mappingByClassName[NSStringFromClass(objectClass)];
+    NSArray* mapping = self.mappingPairsByClassName[NSStringFromClass(objectClass)];
 
     if (mapping == nil) {
-        mapping = [self createMappingForClass:objectClass];
+        mapping = [self createMappingPairsForClass:objectClass];
     }
     
     return mapping;
 }
 
-- (NSArray*) createMappingForClass:(Class)objectClass {
+- (NSArray*) createMappingPairsForClass:(Class)objectClass {
     id instance = [objectClass new];
     if ([instance conformsToProtocol:@protocol(AGMappingProtocol)] == NO) {
         @throw [AGMappingClassIsNotMappingComplaintException exceptionWithClass:objectClass];
     }
     
+    SEL action = @selector(typesOfProperties);
+    IMP imp = [instance methodForSelector:action];
+    NSDictionary* (*func)(id, SEL) = (void *)imp;
+    NSDictionary* typesOfProperties = func(instance, action);
     
+    AGMappingPairBuilder* builder = [AGMappingPairBuilder builderWithTypesOfProperties:typesOfProperties];
+    NSDictionary* dictMapping = [instance mappingFromJSONToObject];
+    
+    NSMutableArray* mappingPairs = [NSMutableArray new];
+    for (NSString* keyFrom in dictMapping) {
+        id keyTo = dictMapping[keyFrom];
+        AGMappingPair* pair = nil;
+
+        if ([keyTo isKindOfClass:[NSString class]]) {
+            pair = [builder mappingPairWithKeyPathFrom:keyFrom
+                                                 keyTo:keyTo];
+
+        }else if ([keyTo isKindOfClass:[NSArray class]]) {
+            NSMutableArray* params = [NSMutableArray arrayWithArray:keyTo];
+            [params removeObjectAtIndex:0];
+            pair = [builder mappingPairWithKeyPathFrom:keyFrom
+                                                 keyTo:keyTo[0]
+                                                params:params];
+        }
+        
+        if (pair) {
+            [mappingPairs addObject:pair];
+        }
+    }
+    
+    self.mappingPairsByClassName[NSStringFromClass(objectClass)] = [NSArray arrayWithArray:mappingPairs];
+    
+    return self.mappingPairsByClassName[NSStringFromClass(objectClass)];
 }
 
 @end

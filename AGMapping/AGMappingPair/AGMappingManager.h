@@ -28,6 +28,6 @@
 
 + (instancetype) sharedInstance;
 
-- (NSArray*) mappingForClass:(Class)objectClass;
+- (NSArray*) mappingPairsForClass:(Class)objectClass;
 
 @end
