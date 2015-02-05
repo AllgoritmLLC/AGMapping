@@ -26,4 +26,30 @@
 
 @implementation AGMappingPairString
 
+#pragma mark - mapping
+- (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
+                       toObject:(NSObject *) object {
+    
+    id valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (valueJSON) {
+        NSString* string = nil;
+        
+        if ([valueJSON isKindOfClass:[NSString class]]) {
+            string = [NSString stringWithString:valueJSON];
+
+        }else if ([valueJSON isKindOfClass:[NSNull class]]) {
+            string = nil;
+            
+        }else if ([valueJSON isKindOfClass:[NSString class]] == NO) {
+            string = [NSString stringWithFormat:@"%@", valueJSON];
+
+        }
+        
+        if (string) {
+            [self setValue:string
+                forKeyPath:self.keyTo];
+        }
+    }
+}
+
 @end
