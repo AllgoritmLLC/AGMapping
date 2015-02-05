@@ -26,6 +26,7 @@
 		BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */; };
 		BAEBE2BB1A837C660092E4E5 /* VBException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2B81A837C660092E4E5 /* VBException.m */; };
 		BAEBE2BC1A837C660092E4E5 /* VBNotImplementedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */; };
+		BAEBE2C21A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C11A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		BAEBE2B81A837C660092E4E5 /* VBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBException.m; sourceTree = "<group>"; };
 		BAEBE2B91A837C660092E4E5 /* VBNotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNotImplementedException.h; sourceTree = "<group>"; };
 		BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNotImplementedException.m; sourceTree = "<group>"; };
+		BAEBE2C01A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingClassIsNotMappingComplaintException.h; sourceTree = "<group>"; };
+		BAEBE2C11A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingClassIsNotMappingComplaintException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */,
 				BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */,
 				BA96028C1A826AF9004D7ABD /* AGMappableObject.h */,
+				BAEBE2C01A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */,
+				BAEBE2C11A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */,
 				BA96028D1A826B8D004D7ABD /* AGMappingPair */,
 			);
 			path = AGMapping;
@@ -333,6 +338,7 @@
 			files = (
 				BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */,
 				BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */,
+				BAEBE2C21A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */,
 				BA96026A1A8239D8004D7ABD /* ViewController.m in Sources */,
 				BAEBE2BB1A837C660092E4E5 /* VBException.m in Sources */,
 				BA9602A41A82726B004D7ABD /* AGMappingPairNumber.m in Sources */,
