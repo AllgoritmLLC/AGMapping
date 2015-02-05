@@ -105,7 +105,8 @@
                                                         className:params[0]];
         }else{
             pair = [AGMappingPairClass mappingPairWithKeyPathFrom:keyPathFrom
-                                                            keyTo:keyTo];
+                                                            keyTo:keyTo
+                                                        className:keyToPropertyType];
         }
     }
     
