@@ -87,6 +87,7 @@
 		BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieGenre.m; sourceTree = "<group>"; };
 		BAC8C9691A83B00000F99897 /* AGPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPerson.h; sourceTree = "<group>"; };
 		BAC8C96A1A83B00000F99897 /* AGPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPerson.m; sourceTree = "<group>"; };
+		BAC8C96E1A83B67700F99897 /* VBDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDefines.h; sourceTree = "<group>"; };
 		BAEBE2B71A837C660092E4E5 /* VBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBException.h; sourceTree = "<group>"; };
 		BAEBE2B81A837C660092E4E5 /* VBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBException.m; sourceTree = "<group>"; };
 		BAEBE2B91A837C660092E4E5 /* VBNotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNotImplementedException.h; sourceTree = "<group>"; };
@@ -141,12 +142,7 @@
 		BA9602601A8239D8004D7ABD /* AGMappingExamples */ = {
 			isa = PBXGroup;
 			children = (
-				BAC8C9631A83AE9200F99897 /* AGMovie.h */,
-				BAC8C9641A83AE9200F99897 /* AGMovie.m */,
-				BAC8C9661A83AF0100F99897 /* AGMovieGenre.h */,
-				BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */,
-				BAC8C9691A83B00000F99897 /* AGPerson.h */,
-				BAC8C96A1A83B00000F99897 /* AGPerson.m */,
+				BAC8C96C1A83B5A300F99897 /* objects */,
 				BA9602651A8239D8004D7ABD /* AppDelegate.h */,
 				BA9602661A8239D8004D7ABD /* AppDelegate.m */,
 				BA9602681A8239D8004D7ABD /* ViewController.h */,
@@ -247,9 +243,31 @@
 			path = AGMappingPairCollection;
 			sourceTree = "<group>";
 		};
+		BAC8C96C1A83B5A300F99897 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8C9631A83AE9200F99897 /* AGMovie.h */,
+				BAC8C9641A83AE9200F99897 /* AGMovie.m */,
+				BAC8C9661A83AF0100F99897 /* AGMovieGenre.h */,
+				BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */,
+				BAC8C9691A83B00000F99897 /* AGPerson.h */,
+				BAC8C96A1A83B00000F99897 /* AGPerson.m */,
+			);
+			name = objects;
+			sourceTree = "<group>";
+		};
+		BAC8C96D1A83B67700F99897 /* VBDefines */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8C96E1A83B67700F99897 /* VBDefines.h */,
+			);
+			path = VBDefines;
+			sourceTree = "<group>";
+		};
 		BAEBE2B51A837C660092E4E5 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAC8C96D1A83B67700F99897 /* VBDefines */,
 				BAEBE2B61A837C660092E4E5 /* VBException */,
 			);
 			path = frameworks;
