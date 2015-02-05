@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "AGMapping.h"
+#import "AGMovie.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +20,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSDictionary* dict = @{@"id":       @(123),
+                           @"poster": @{@"poster_small":    @"url for poster_small",
+                                        @"poster_big":      @"url for poster_big"},
+                           @"genre": @{@"name": @"comedy"},
+                           @"cast": @[@{@"id":      @(100500),
+                                        @"name":    @"John"},
+                                      @{@"id":      @(100501),
+                                        @"name":    @"Victoria"}],
+                           @"date": @"2010/01/01",
+                           @"countries": @[@"Russia", @"USA"]};
+    
+    AGMovie* movie = [AGMovie objectMappedFromJSONObject:dict];
+    NSLog(@"%@", movie);
+    
     return YES;
 }
 
