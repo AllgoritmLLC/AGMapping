@@ -28,6 +28,11 @@
 
 @implementation AGMappingPairClass
 
++ (instancetype) mappingPairWithKeyPathFrom:(NSString *)keyPathFrom
+                                      keyTo:(NSString *)keyTo{
+    @throw [AGMappingClassNameUndefinedException exception];
+}
+
 + (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                       keyTo:(NSString*) keyTo
                                   className:(NSString*) className {

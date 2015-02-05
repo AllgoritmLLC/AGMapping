@@ -24,7 +24,14 @@
 
 #import "AGMappingPairCollection.h"
 
+#import "AGMappingClassNameUndefinedException.h"
+
 @implementation AGMappingPairCollection
+
++ (instancetype) mappingPairWithKeyPathFrom:(NSString *)keyPathFrom
+                                      keyTo:(NSString *)keyTo{
+    @throw [AGMappingClassNameUndefinedException exception];
+}
 
 + (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                       keyTo:(NSString*) keyTo

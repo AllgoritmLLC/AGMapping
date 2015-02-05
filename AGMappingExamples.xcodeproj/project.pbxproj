@@ -29,6 +29,7 @@
 		BAEBE2C51A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */; };
 		BAEBE2C81A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */; };
 		BAEBE2CB1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2CA1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m */; };
+		BAEBE2CE1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2CD1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingInvalidMappingFormatException.m; sourceTree = "<group>"; };
 		BAEBE2C91A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingUndefinedObjectPropertyException.h; sourceTree = "<group>"; };
 		BAEBE2CA1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingUndefinedObjectPropertyException.m; sourceTree = "<group>"; };
+		BAEBE2CC1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingClassNameUndefinedException.h; sourceTree = "<group>"; };
+		BAEBE2CD1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingClassNameUndefinedException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,8 @@
 		BA96029D1A827242004D7ABD /* AGMappingPairConcrete */ = {
 			isa = PBXGroup;
 			children = (
+				BAEBE2CC1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.h */,
+				BAEBE2CD1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m */,
 				BA9602A21A82726B004D7ABD /* AGMappingPairNumber.h */,
 				BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */,
 				BA9602A51A82727F004D7ABD /* AGMappingPairString.h */,
@@ -346,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAEBE2CE1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m in Sources */,
 				BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */,
 				BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */,
 				BA96026A1A8239D8004D7ABD /* ViewController.m in Sources */,
