@@ -35,6 +35,6 @@
 
 - (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                         keyTo:(NSString*) keyTo
-                                         info:(NSString*) info;
+                                       params:(NSArray*) params;
 
 @end

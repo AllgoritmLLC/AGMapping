@@ -47,12 +47,14 @@
 #pragma mark - build
 - (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                         keyTo:(NSString*) keyTo {
-    return nil;
+    return [self mappingPairWithKeyPathFrom:keyPathFrom
+                                      keyTo:keyTo
+                                     params:nil];
 }
 
 - (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                         keyTo:(NSString*) keyTo
-                                         info:(NSString*) info {
+                                       params:(NSArray*) params {
     return nil;
 }
 
