@@ -24,6 +24,9 @@
 		BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */; };
 		BA9602B01A8272D8004D7ABD /* AGMappingPairCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */; };
 		BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */; };
+		BAC8C9651A83AE9200F99897 /* AGMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C9641A83AE9200F99897 /* AGMovie.m */; };
+		BAC8C9681A83AF0100F99897 /* AGMovieGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */; };
+		BAC8C96B1A83B00000F99897 /* AGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C96A1A83B00000F99897 /* AGPerson.m */; };
 		BAEBE2BB1A837C660092E4E5 /* VBException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2B81A837C660092E4E5 /* VBException.m */; };
 		BAEBE2BC1A837C660092E4E5 /* VBNotImplementedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */; };
 		BAEBE2C51A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */; };
@@ -78,6 +81,12 @@
 		BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairCollection.m; sourceTree = "<group>"; };
 		BA9602B11A8272E8004D7ABD /* AGMappingPairArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairArray.h; sourceTree = "<group>"; };
 		BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairArray.m; sourceTree = "<group>"; };
+		BAC8C9631A83AE9200F99897 /* AGMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovie.h; sourceTree = "<group>"; };
+		BAC8C9641A83AE9200F99897 /* AGMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovie.m; sourceTree = "<group>"; };
+		BAC8C9661A83AF0100F99897 /* AGMovieGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovieGenre.h; sourceTree = "<group>"; };
+		BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieGenre.m; sourceTree = "<group>"; };
+		BAC8C9691A83B00000F99897 /* AGPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPerson.h; sourceTree = "<group>"; };
+		BAC8C96A1A83B00000F99897 /* AGPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPerson.m; sourceTree = "<group>"; };
 		BAEBE2B71A837C660092E4E5 /* VBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBException.h; sourceTree = "<group>"; };
 		BAEBE2B81A837C660092E4E5 /* VBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBException.m; sourceTree = "<group>"; };
 		BAEBE2B91A837C660092E4E5 /* VBNotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNotImplementedException.h; sourceTree = "<group>"; };
@@ -132,6 +141,12 @@
 		BA9602601A8239D8004D7ABD /* AGMappingExamples */ = {
 			isa = PBXGroup;
 			children = (
+				BAC8C9631A83AE9200F99897 /* AGMovie.h */,
+				BAC8C9641A83AE9200F99897 /* AGMovie.m */,
+				BAC8C9661A83AF0100F99897 /* AGMovieGenre.h */,
+				BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */,
+				BAC8C9691A83B00000F99897 /* AGPerson.h */,
+				BAC8C96A1A83B00000F99897 /* AGPerson.m */,
 				BA9602651A8239D8004D7ABD /* AppDelegate.h */,
 				BA9602661A8239D8004D7ABD /* AppDelegate.m */,
 				BA9602681A8239D8004D7ABD /* ViewController.h */,
@@ -363,6 +378,9 @@
 				BAEBE2C51A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */,
 				BAEBE2CB1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m in Sources */,
 				BAEBE2BC1A837C660092E4E5 /* VBNotImplementedException.m in Sources */,
+				BAC8C9651A83AE9200F99897 /* AGMovie.m in Sources */,
+				BAC8C9681A83AF0100F99897 /* AGMovieGenre.m in Sources */,
+				BAC8C96B1A83B00000F99897 /* AGPerson.m in Sources */,
 				BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */,
 				BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */,
 				BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */,
