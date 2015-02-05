@@ -12,7 +12,8 @@
 
 + (NSDictionary *) mappingFromJSONToObject {
     return @{@"id":     @"identifier",
-             @"name":   @"name"};
+             @"name":   @"name",
+             @"shotDates":  @[@"castDates", @"NSDate", @"yyyy/MM/dd"]};
 }
 
 @end
