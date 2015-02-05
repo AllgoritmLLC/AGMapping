@@ -10,6 +10,10 @@
 
 @implementation AGMappingInvalidMappingFormatException
 
++ (instancetype) exception {
+    return [self exceptionWithReason:@"Exception while using mapping of class %@. All JSON keyPathFrom-s must be of NSString class. All JSON keyTo-s must be of NSString or NSArray<NSString> class."];
+}
+
 + (instancetype) exceptionWithMappingObjectClass:(Class) objectClass
                                      keyPathFrom:(id) keyPathFrom {
     NSString* objectClassName = NSStringFromClass(objectClass);
