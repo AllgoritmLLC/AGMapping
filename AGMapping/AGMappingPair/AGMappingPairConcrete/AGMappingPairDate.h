@@ -28,4 +28,8 @@
 
 @property (nonatomic, strong) NSString* dateFormat;
 
++ (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
+                                      keyTo:(NSString*) keyTo
+                                 dateFormat:(NSString*) dateFormat;
+
 @end
