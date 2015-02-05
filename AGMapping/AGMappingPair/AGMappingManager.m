@@ -28,6 +28,8 @@
 #import "AGMappingProtocol.h"
 
 #import "AGMappingClassIsNotMappingComplaintException.h"
+#import "AGMappingInvalidMappingFormatException.h"
+
 #import "AGMappingPairBuilder.h"
 
 @interface AGMappingManager ()
@@ -80,6 +82,8 @@
     
     AGMappingPairBuilder* builder = [AGMappingPairBuilder builderWithTypesOfProperties:typesOfProperties];
     NSDictionary* dictMapping = [instance mappingFromJSONToObject];
+    [self validateMappingOfClass:objectClass
+                      Dictionary:dictMapping];
     
     NSMutableArray* mappingPairs = [NSMutableArray new];
     for (NSString* keyFrom in dictMapping) {
@@ -106,6 +110,33 @@
     self.mappingPairsByClassName[NSStringFromClass(objectClass)] = [NSArray arrayWithArray:mappingPairs];
     
     return self.mappingPairsByClassName[NSStringFromClass(objectClass)];
+}
+
+- (void) validateMappingOfClass:(Class)objectClass
+                     Dictionary:(NSDictionary*) dictMapping {
+    for (id keyFrom in dictMapping) {
+        if ([keyFrom isKindOfClass:[NSString class]] == NO) {
+            @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass
+                                                                                   keyFrom:keyFrom];
+        }
+        
+        id keyTo = dictMapping[keyFrom];
+        if ([keyTo isKindOfClass:[NSString class]] == NO &&
+            [keyTo isKindOfClass:[NSArray class]] == NO) {
+            @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass
+                                                                                     keyTo:keyTo];
+        }
+        
+        if ([keyTo isKindOfClass:[NSArray class]]) {
+            NSArray* keyToArray = (NSArray*)keyTo;
+            for (id keyToEntry in keyToArray) {
+                if ([keyToEntry isKindOfClass:[NSString class]] == NO) {
+                    @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass
+                                                                                        keyToEntry:keyToEntry];
+                }
+            }
+        }
+    }
 }
 
 @end

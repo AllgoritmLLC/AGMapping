@@ -27,6 +27,7 @@
 		BAEBE2BB1A837C660092E4E5 /* VBException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2B81A837C660092E4E5 /* VBException.m */; };
 		BAEBE2BC1A837C660092E4E5 /* VBNotImplementedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */; };
 		BAEBE2C51A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */; };
+		BAEBE2C81A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNotImplementedException.m; sourceTree = "<group>"; };
 		BAEBE2C31A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingClassIsNotMappingComplaintException.h; sourceTree = "<group>"; };
 		BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingClassIsNotMappingComplaintException.m; sourceTree = "<group>"; };
+		BAEBE2C61A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingInvalidMappingFormatException.h; sourceTree = "<group>"; };
+		BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingInvalidMappingFormatException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +180,12 @@
 		BA96028D1A826B8D004D7ABD /* AGMappingPair */ = {
 			isa = PBXGroup;
 			children = (
-				BAEBE2C31A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */,
-				BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */,
 				BA96028E1A826CA3004D7ABD /* AGMappingManager.h */,
 				BA96028F1A826CA3004D7ABD /* AGMappingManager.m */,
+				BAEBE2C31A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */,
+				BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */,
+				BAEBE2C61A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.h */,
+				BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */,
 				BA96029A1A827091004D7ABD /* AGMappingPairBuilder.h */,
 				BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */,
 				BA9602971A826EC9004D7ABD /* AGMappingPair.h */,
@@ -351,6 +356,7 @@
 				BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */,
 				BA9602AA1A8272BC004D7ABD /* AGMappingPairClass.m in Sources */,
 				BA96029C1A827091004D7ABD /* AGMappingPairBuilder.m in Sources */,
+				BAEBE2C81A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m in Sources */,
 				BA9602641A8239D8004D7ABD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
