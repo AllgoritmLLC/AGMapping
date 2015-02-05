@@ -20,7 +20,7 @@
 		BA96029C1A827091004D7ABD /* AGMappingPairBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */; };
 		BA9602A41A82726B004D7ABD /* AGMappingPairNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */; };
 		BA9602A71A82727F004D7ABD /* AGMappingPairString.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A61A82727F004D7ABD /* AGMappingPairString.m */; };
-		BA9602AA1A8272BC004D7ABD /* AGMappingPairClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A91A8272BC004D7ABD /* AGMappingPairClass.m */; };
+		BA9602AA1A8272BC004D7ABD /* AGMappingPairObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A91A8272BC004D7ABD /* AGMappingPairObject.m */; };
 		BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */; };
 		BA9602B01A8272D8004D7ABD /* AGMappingPairCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */; };
 		BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */; };
@@ -73,8 +73,8 @@
 		BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairNumber.m; sourceTree = "<group>"; };
 		BA9602A51A82727F004D7ABD /* AGMappingPairString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairString.h; sourceTree = "<group>"; };
 		BA9602A61A82727F004D7ABD /* AGMappingPairString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairString.m; sourceTree = "<group>"; };
-		BA9602A81A8272BC004D7ABD /* AGMappingPairClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairClass.h; sourceTree = "<group>"; };
-		BA9602A91A8272BC004D7ABD /* AGMappingPairClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairClass.m; sourceTree = "<group>"; };
+		BA9602A81A8272BC004D7ABD /* AGMappingPairObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairObject.h; sourceTree = "<group>"; };
+		BA9602A91A8272BC004D7ABD /* AGMappingPairObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairObject.m; sourceTree = "<group>"; };
 		BA9602AB1A8272C9004D7ABD /* AGMappingPairDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairDate.h; sourceTree = "<group>"; };
 		BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairDate.m; sourceTree = "<group>"; };
 		BA9602AE1A8272D8004D7ABD /* AGMappingPairCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairCollection.h; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 				BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */,
 				BA9602A51A82727F004D7ABD /* AGMappingPairString.h */,
 				BA9602A61A82727F004D7ABD /* AGMappingPairString.m */,
-				BA9602A81A8272BC004D7ABD /* AGMappingPairClass.h */,
-				BA9602A91A8272BC004D7ABD /* AGMappingPairClass.m */,
+				BA9602A81A8272BC004D7ABD /* AGMappingPairObject.h */,
+				BA9602A91A8272BC004D7ABD /* AGMappingPairObject.m */,
 				BA9602AB1A8272C9004D7ABD /* AGMappingPairDate.h */,
 				BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */,
 				BA9602AE1A8272D8004D7ABD /* AGMappingPairCollection.h */,
@@ -402,7 +402,7 @@
 				BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */,
 				BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */,
 				BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */,
-				BA9602AA1A8272BC004D7ABD /* AGMappingPairClass.m in Sources */,
+				BA9602AA1A8272BC004D7ABD /* AGMappingPairObject.m in Sources */,
 				BA96029C1A827091004D7ABD /* AGMappingPairBuilder.m in Sources */,
 				BAEBE2C81A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m in Sources */,
 				BA9602641A8239D8004D7ABD /* main.m in Sources */,

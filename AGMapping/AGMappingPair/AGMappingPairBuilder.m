@@ -27,7 +27,7 @@
 #import "AGMappingPairNumber.h"
 #import "AGMappingPairString.h"
 #import "AGMappingPairDate.h"
-#import "AGMappingPairClass.h"
+#import "AGMappingPairObject.h"
 #import "AGMappingPairArray.h"
 
 #import "AGMappingUndefinedObjectPropertyException.h"
@@ -100,13 +100,13 @@
         
     }else {
         if (params.count == 1) {
-            pair = [AGMappingPairClass mappingPairWithKeyPathFrom:keyPathFrom
-                                                            keyTo:keyTo
-                                                        className:params[0]];
+            pair = [AGMappingPairObject mappingPairWithKeyPathFrom:keyPathFrom
+                                                             keyTo:keyTo
+                                                         className:params[0]];
         }else{
-            pair = [AGMappingPairClass mappingPairWithKeyPathFrom:keyPathFrom
-                                                            keyTo:keyTo
-                                                        className:keyToPropertyType];
+            pair = [AGMappingPairObject mappingPairWithKeyPathFrom:keyPathFrom
+                                                             keyTo:keyTo
+                                                         className:keyToPropertyType];
         }
     }
     

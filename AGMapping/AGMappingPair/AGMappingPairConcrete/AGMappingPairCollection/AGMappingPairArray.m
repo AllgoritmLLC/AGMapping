@@ -37,9 +37,9 @@
         NSMutableArray* array = [NSMutableArray new];
 
         for (NSInteger i = 0; i < valueJSON.count; i++) {
-            NSDictionary* jsonObject = valueJSON[i];
+            id arrayEntry = valueJSON[i];
             
-            NSObject* obj = [self.entryClass objectMappedFromJSONObject:jsonObject];
+            NSObject* obj = [self.entryClass objectMappedFromJSONObject:arrayEntry];
             if (obj) {
                 [array addObject:obj];
             }

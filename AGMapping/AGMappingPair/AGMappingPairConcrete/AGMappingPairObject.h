@@ -24,7 +24,7 @@
 
 #import "AGMappingPair.h"
 
-@interface AGMappingPairClass : AGMappingPair
+@interface AGMappingPairObject : AGMappingPair
 
 @property (nonatomic, strong) NSString* className;
 

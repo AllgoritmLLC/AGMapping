@@ -22,13 +22,13 @@
 //    SOFTWARE.
 //
 
-#import "AGMappingPairClass.h"
+#import "AGMappingPairObject.h"
 
 #import "NSObject+AGMapping.h"
 
 #import "AGMappingClassNameUndefinedException.h"
 
-@implementation AGMappingPairClass
+@implementation AGMappingPairObject
 
 + (instancetype) mappingPairWithKeyPathFrom:(NSString *)keyPathFrom
                                       keyTo:(NSString *)keyTo{
