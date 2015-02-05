@@ -70,15 +70,14 @@
 }
 
 - (NSArray*) createMappingPairsForClass:(Class)objectClass {
-    id instance = [objectClass new];
-    if ([instance conformsToProtocol:@protocol(AGMappingProtocol)] == NO) {
+    if ([objectClass conformsToProtocol:@protocol(AGMappingProtocol)] == NO) {
         @throw [AGMappingClassIsNotMappingComplaintException exceptionWithClass:objectClass];
     }
     
     AGMappingPairBuilder* builder = [AGMappingPairBuilder new];
     builder.mappingObjectClass = objectClass;
     
-    NSDictionary* dictMapping = [instance mappingFromJSONToObject];
+    NSDictionary* dictMapping = [objectClass mappingFromJSONToObject];
     [self validateMappingOfClass:objectClass
                       Dictionary:dictMapping];
     

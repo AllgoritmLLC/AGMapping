@@ -26,6 +26,9 @@
 
 #import <objc/runtime.h>
 
+#import "AGMappingManager.h"
+#import "AGMappingPair.h"
+
 @implementation NSObject (AGMapping)
 
 + (instancetype) objectMappedFromJSONObject:(NSDictionary*) jsonObject {
@@ -42,7 +45,11 @@
 
 #pragma mark - mapping
 - (void) mapValuesFromJSONObject:(NSDictionary*) jsonObject {
-    
+    NSArray* mapPairs = [[AGMappingManager sharedInstance] mappingPairsForClass:[self class]];
+    for (AGMappingPair* pair in mapPairs) {
+        [pair mapValueFromJSONObject:jsonObject
+                            toObject:self];
+    }
 }
 
 #pragma mark - properties
