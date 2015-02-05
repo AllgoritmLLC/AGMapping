@@ -26,6 +26,8 @@
 
 #import "NSObject+AGMapping.h"
 
+#import "AGMappingClassNameUndefinedException.h"
+
 @implementation AGMappingPairClass
 
 + (instancetype) mappingPairWithKeyPathFrom:(NSString *)keyPathFrom
