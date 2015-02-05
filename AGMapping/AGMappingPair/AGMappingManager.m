@@ -24,6 +24,10 @@
 
 #import "AGMappingManager.h"
 
+#import "AGMappingClassIsNotMappingComplaintException.h"
+
+#import "AGMappingProtocol.h"
+
 @interface AGMappingManager ()
 
 @property (nonatomic, strong) NSMutableDictionary* mappingByClassName;
@@ -62,7 +66,12 @@
 }
 
 - (NSArray*) createMappingForClass:(Class)objectClass {
-    return nil;
+    id instance = [objectClass new];
+    if ([instance conformsToProtocol:@protocol(AGMappingProtocol)] == NO) {
+        @throw [AGMappingClassIsNotMappingComplaintException exceptionWithClass:objectClass];
+    }
+    
+    
 }
 
 @end
