@@ -15,7 +15,7 @@
              @"poster.poster_small":    @"urlSmall",
              @"genre":                  @"genre",
              @"cast":                   @[@"cast", @"AGPerson"],
-             @"date":                   @"releaseDate",
+             @"date":                   @[@"releaseDate", @"yyyy/MM/dd"],
              @"countries":              @[@"countries", @"NSString"]};
 }
 

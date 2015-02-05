@@ -53,10 +53,10 @@
     if (jsonValue) {
         NSDate* date = nil;
         if (self.dateFormat) {
-            [self.class objectWithJSONValue:jsonValue
-                                 dateFormat:self.dateFormat];
+            date = [self.class objectWithJSONValue:jsonValue
+                                        dateFormat:self.dateFormat];
         }else{
-            [self.class objectWithJSONValue:jsonValue];
+            date = [self.class objectWithJSONValue:jsonValue];
         }
         
         if (date) {
