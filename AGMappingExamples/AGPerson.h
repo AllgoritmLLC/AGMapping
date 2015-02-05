@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AGPerson : NSObject
+#import "AGMappingProtocol.h"
+
+@interface AGPerson : NSObject <AGMappingProtocol>
 
 @property (nonatomic, strong) NSNumber* identifier;
 @property (nonatomic, strong) NSString* name;

@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AGMovieGenre : NSObject
+#import "AGMappingProtocol.h"
+
+@interface AGMovieGenre : NSObject <AGMappingProtocol>
 
 @property (nonatomic, strong) NSString* name;
 
