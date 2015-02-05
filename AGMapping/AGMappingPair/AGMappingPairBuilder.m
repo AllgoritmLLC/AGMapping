@@ -47,6 +47,7 @@
     SEL action = @selector(typesOfProperties);
     IMP imp = [instance methodForSelector:action];
     NSDictionary* (*func)(id, SEL) = (void *)imp;
+    
     self.typesOfProperties = func(instance, action);
 }
 
@@ -68,7 +69,30 @@
                                                                       propertyName:keyTo];
     }
     
-    return nil;
+    AGMappingPair* pair = nil;
+    if ([keyToPropertyType isEqualToString:@"NSString"]) {
+        pair = [AGMappingPairString mappingPairWithKeyPathFrom:keyPathFrom
+                                                         keyTo:keyTo];
+
+    }else if ([keyToPropertyType isEqualToString:@"NSNumber"]) {
+        pair = [AGMappingPairNumber mappingPairWithKeyPathFrom:keyPathFrom
+                                                         keyTo:keyTo];
+
+    }else if ([keyToPropertyType isEqualToString:@"NSDate"]) {
+        pair = [AGMappingPairDate mappingPairWithKeyPathFrom:keyPathFrom
+                                                       keyTo:keyTo];
+
+    }else if ([keyToPropertyType isEqualToString:@"NSArray"]) {
+        pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
+                                                        keyTo:keyTo];
+        
+    }else {
+        pair = [AGMappingPairClass mappingPairWithKeyPathFrom:keyPathFrom
+                                                        keyTo:keyTo];
+        
+    }
+    
+    return pair;
 }
 
 @end
