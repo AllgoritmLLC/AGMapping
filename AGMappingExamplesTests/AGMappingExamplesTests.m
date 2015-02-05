@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#import "AGMovie.h"
+
 @interface AGMappingExamplesTests : XCTestCase
 
 @end
@@ -26,7 +28,21 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
+    NSDictionary* json = @{@"id":       @(123),
+                           @"poster": @{@"poster_small":    @"url for poster_small",
+                                        @"poster_big":      @"url for poster_big"},
+                           @"genre": @{@"name": @"comedy"},
+                           @"cast": @[@{@"id":      @(100500),
+                                        @"name":    @"John"},
+                                      @{@"id":      @(100501),
+                                        @"name":    @"Victoria"}],
+                           @"date": @"2010/01/01",
+                           @"countries": @[@"Russia", @"USA"]};
+    
+    AGMovie* movie = [AGMovie objectMappedFromJSONObject:json];
+    
+    NSLog(@"%@", movie);
+    
     XCTAssert(YES, @"Pass");
 }
 
