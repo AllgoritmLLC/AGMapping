@@ -26,4 +26,27 @@
 
 @implementation AGMappingPairCollection
 
++ (instancetype) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
+                                      keyTo:(NSString*) keyTo
+                             entryClassName:(NSString*) entryClassName {
+    return [[self alloc] initWithKeyPathFrom:keyPathFrom
+                                       keyTo:keyTo
+                              entryClassName:entryClassName];
+}
+
+- (instancetype) initWithKeyPathFrom:(NSString*) keyPathFrom
+                               keyTo:(NSString*) keyTo
+                      entryClassName:(NSString*) entryClassName {
+    self = [super initWithKeyPathFrom:keyPathFrom
+                                keyTo:keyTo];
+    if (self) {
+        self.entryClassName = entryClassName;
+    }
+    return self;
+}
+
+- (Class) entryClass {
+    return NSClassFromString(self.entryClassName);
+}
+
 @end

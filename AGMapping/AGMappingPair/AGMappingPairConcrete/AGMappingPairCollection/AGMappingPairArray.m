@@ -24,6 +24,33 @@
 
 #import "AGMappingPairArray.h"
 
+#import "NSObject+AGMapping.h"
+
 @implementation AGMappingPairArray
+
+#pragma mark - mapping
+- (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
+                       toObject:(NSObject *) object {
+    
+    NSArray* valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (valueJSON) {
+        NSMutableArray* array = [NSMutableArray new];
+
+        for (NSInteger i = 0; i < valueJSON.count; i++) {
+            NSDictionary* jsonObject = valueJSON[i];
+            
+            NSObject* obj = [self.entryClass objectMappedFromJSONObject:jsonObject];
+            if (obj) {
+                [array addObject:obj];
+            }
+        }
+        
+        if (array.count == 0) {
+            array = nil;
+        }
+        [object setValue:array
+              forKeyPath:self.keyTo];
+    }
+}
 
 @end
