@@ -28,9 +28,7 @@
 
 @interface AGMappingPairBuilder : NSObject
 
-@property (nonatomic, strong) NSDictionary* typesOfProperties;
-
-+ (instancetype) builderWithTypesOfProperties:(NSDictionary*) typesOfProperties;
+@property (nonatomic, strong) Class mappingObjectClass;
 
 - (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                         keyTo:(NSString*) keyTo;

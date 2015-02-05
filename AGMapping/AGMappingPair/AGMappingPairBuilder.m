@@ -32,18 +32,22 @@
 
 #import "AGMappingUndefinedObjectPropertyException.h"
 
+@interface AGMappingPairBuilder ()
+
+@property (nonatomic, strong) NSDictionary* typesOfProperties;
+
+@end
+
 @implementation AGMappingPairBuilder
 
-+ (instancetype) builderWithTypesOfProperties:(NSDictionary*) typesOfProperties {
-    return [[self alloc] initWithTypesOfProperties:typesOfProperties];
-}
-
-- (instancetype) initWithTypesOfProperties:(NSDictionary*) typesOfProperties {
-    self = [super init];
-    if (self) {
-        self.typesOfProperties = typesOfProperties;
-    }
-    return self;
+- (void) setMappingObjectClass:(Class)mappingObjectClass {
+    _mappingObjectClass = mappingObjectClass;
+    
+    id instance = [mappingObjectClass new];
+    SEL action = @selector(typesOfProperties);
+    IMP imp = [instance methodForSelector:action];
+    NSDictionary* (*func)(id, SEL) = (void *)imp;
+    self.typesOfProperties = func(instance, action);
 }
 
 #pragma mark - build
@@ -60,7 +64,7 @@
     
     NSString* keyToPropertyType = self.typesOfProperties[keyTo];
     if (keyToPropertyType == nil) {
-        @throw [AGMappingUndefinedObjectPropertyException exceptionWithObjectClass:[self class]
+        @throw [AGMappingUndefinedObjectPropertyException exceptionWithObjectClass:self.mappingObjectClass
                                                                       propertyName:keyTo];
     }
     

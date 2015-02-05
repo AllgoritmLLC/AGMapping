@@ -75,12 +75,9 @@
         @throw [AGMappingClassIsNotMappingComplaintException exceptionWithClass:objectClass];
     }
     
-    SEL action = @selector(typesOfProperties);
-    IMP imp = [instance methodForSelector:action];
-    NSDictionary* (*func)(id, SEL) = (void *)imp;
-    NSDictionary* typesOfProperties = func(instance, action);
+    AGMappingPairBuilder* builder = [AGMappingPairBuilder new];
+    builder.mappingObjectClass = objectClass;
     
-    AGMappingPairBuilder* builder = [AGMappingPairBuilder builderWithTypesOfProperties:typesOfProperties];
     NSDictionary* dictMapping = [instance mappingFromJSONToObject];
     [self validateMappingOfClass:objectClass
                       Dictionary:dictMapping];
