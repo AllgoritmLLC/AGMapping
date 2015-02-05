@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol AGMappableObject <NSObject>
+@protocol AGMappingProtocol <NSObject>
 
 + (NSDictionary*) mappingFromJSONToObject;
 

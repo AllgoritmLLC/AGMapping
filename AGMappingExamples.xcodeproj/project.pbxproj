@@ -56,7 +56,7 @@
 		BA9602881A823D41004D7ABD /* AGMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGMapping.h; sourceTree = "<group>"; };
 		BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGMapping.h"; sourceTree = "<group>"; };
 		BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGMapping.m"; sourceTree = "<group>"; };
-		BA96028C1A826AF9004D7ABD /* AGMappableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappableObject.h; sourceTree = "<group>"; };
+		BA96028C1A826AF9004D7ABD /* AGMappingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingProtocol.h; sourceTree = "<group>"; };
 		BA96028E1A826CA3004D7ABD /* AGMappingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingManager.h; sourceTree = "<group>"; };
 		BA96028F1A826CA3004D7ABD /* AGMappingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingManager.m; sourceTree = "<group>"; };
 		BA9602971A826EC9004D7ABD /* AGMappingPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPair.h; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				BA9602881A823D41004D7ABD /* AGMapping.h */,
 				BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */,
 				BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */,
-				BA96028C1A826AF9004D7ABD /* AGMappableObject.h */,
+				BA96028C1A826AF9004D7ABD /* AGMappingProtocol.h */,
 				BAEBE2C01A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */,
 				BAEBE2C11A837F8D0092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */,
 				BA96028D1A826B8D004D7ABD /* AGMappingPair */,
