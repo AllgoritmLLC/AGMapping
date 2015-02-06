@@ -40,6 +40,10 @@
     if (jsonValue) {
         NSMutableArray* array = [NSMutableArray new];
 
+        if ([jsonValue isKindOfClass:[NSArray class]] == NO) {
+            jsonValue = [NSArray arrayWithObject:jsonValue];
+        }
+        
         for (NSInteger i = 0; i < jsonValue.count; i++) {
             id jsonValueEntry = jsonValue[i];
             NSObject* obj = [self.class objectWithJSONValue:jsonValueEntry

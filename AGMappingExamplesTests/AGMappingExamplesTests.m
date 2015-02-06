@@ -49,6 +49,18 @@
                                                 @"name":    @"Victoria"}],
                              @"date":       @"2010/01/01",
                              @"countries":  @[@"Russia", @"USA"]}];
+    
+    [jsonObjects addObject:@{@"id":         @(123),
+                             @"poster":     @{@"poster_small":    @"url for poster_small",
+                                              @"poster_big":      @"url for poster_big"},
+                             @"genre":      @{@"name": @"comedy"},
+                             @"cast":       @[@{@"id":      @(100500),
+                                                @"name":    @"John",
+                                                @"shotDates": @[@"2011/11/11", @"2012/12/12"]},
+                                              @{@"id":      @(100501),
+                                                @"name":    @"Victoria"}],
+                             @"date":       @"2010/01/01",
+                             @"countries":  @"Russia"}];
 
     for (NSDictionary* json in jsonObjects) {
         AGMovie* movie = nil;
