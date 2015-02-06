@@ -36,32 +36,16 @@
 - (void) mapValueFromJSONObject:(NSDictionary *) jsonObject
                        toObject:(NSObject *) object {
     
-    NSArray* valueJSON = [jsonObject valueForKeyPath:self.keyPathFrom];
-    if (valueJSON) {
+    NSArray* jsonValue = [jsonObject valueForKeyPath:self.keyPathFrom];
+    if (jsonValue) {
         NSMutableArray* array = [NSMutableArray new];
 
-        for (NSInteger i = 0; i < valueJSON.count; i++) {
-            id arrayEntry = valueJSON[i];
-            NSObject* obj = nil;
-            
-            if (self.entryClass == [NSString class]) {
-                obj = [AGMappingPairString objectWithJSONValue:arrayEntry];
-
-            }else if (self.entryClass == [NSNumber class]) {
-                obj = [AGMappingPairNumber objectWithJSONValue:arrayEntry];
-
-            }else if (self.entryClass == [NSDate class]) {
-                if (self.entryClassInfo) {
-                    obj = [AGMappingPairDate objectWithJSONValue:arrayEntry
-                                                      dateFormat:self.entryClassInfo];
-                }else{
-                    obj = [AGMappingPairDate objectWithJSONValue:arrayEntry];
-                }
-                
-            }else{
-                obj = [self.entryClass objectMappedFromJSONObject:arrayEntry];
-            }
-            
+        for (NSInteger i = 0; i < jsonValue.count; i++) {
+            id jsonValueEntry = jsonValue[i];
+            NSObject* obj = [self.class objectWithJSONValue:jsonValueEntry
+                                                 entryClass:self.entryClass
+                                             entryClassInfo:self.entryClassInfo];            
+                        
             if (obj) {
                 [array addObject:obj];
             }

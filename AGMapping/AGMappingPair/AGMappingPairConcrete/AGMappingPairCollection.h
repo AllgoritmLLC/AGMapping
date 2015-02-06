@@ -40,4 +40,8 @@
                              entryClassName:(NSString*) entryClassName
                              entryClassInfo:(NSString*) entryClassInfo;
 
++ (id) objectWithJSONValue:(id)jsonValue
+                entryClass:(Class)entryClass
+            entryClassInfo:(NSString*)entryClassInfo;
+
 @end

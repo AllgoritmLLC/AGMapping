@@ -26,6 +26,12 @@
 
 #import "AGMappingClassNameUndefinedException.h"
 
+#import "AGMappingPairString.h"
+#import "AGMappingPairNumber.h"
+#import "AGMappingPairDate.h"
+
+#import "NSObject+AGMapping.h"
+
 @implementation AGMappingPairCollection
 
 + (instancetype) mappingPairWithKeyPathFrom:(NSString *)keyPathFrom
@@ -67,6 +73,35 @@
 
 - (Class) entryClass {
     return NSClassFromString(self.entryClassName);
+}
+
++ (id) objectWithJSONValue:(id)jsonValue {
+    return [self objectWithJSONValue:jsonValue
+                          entryClass:[NSString class]
+                      entryClassInfo:nil];
+}
++ (id) objectWithJSONValue:(id)jsonValue
+                entryClass:(Class)entryClass
+            entryClassInfo:(NSString*)entryClassInfo {
+    id obj = nil;
+    if (entryClass == [NSString class]) {
+        obj = [AGMappingPairString objectWithJSONValue:jsonValue];
+        
+    }else if (entryClass == [NSNumber class]) {
+        obj = [AGMappingPairNumber objectWithJSONValue:jsonValue];
+        
+    }else if (entryClass == [NSDate class]) {
+        if (entryClassInfo) {
+            obj = [AGMappingPairDate objectWithJSONValue:jsonValue
+                                              dateFormat:entryClassInfo];
+        }else{
+            obj = [AGMappingPairDate objectWithJSONValue:jsonValue];
+        }
+        
+    }else{
+        obj = [entryClass objectMappedFromJSONObject:jsonValue];
+    }
+    return obj;
 }
 
 @end
