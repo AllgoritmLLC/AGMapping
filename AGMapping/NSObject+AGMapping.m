@@ -31,6 +31,14 @@
 
 @implementation NSObject (AGMapping)
 
++ (NSArray*) objectsMappedFromJSONArray:(NSArray*) jsonArray {
+    NSMutableArray* array = [NSMutableArray new];
+    for (NSInteger i = 0; i < jsonArray.count; i++) {
+        [array addObject:[self objectMappedFromJSONObject:jsonArray[i]]];
+    }
+    return [NSArray arrayWithArray:array];
+}
+
 + (instancetype) objectMappedFromJSONObject:(NSDictionary*) jsonObject {
     return [[self alloc] initWithJSONObject:jsonObject];
 }

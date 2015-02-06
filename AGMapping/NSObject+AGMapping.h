@@ -26,6 +26,7 @@
 
 @interface NSObject (AGMapping)
 
++ (NSArray*) objectsMappedFromJSONArray:(NSArray*) jsonArray;
 + (instancetype) objectMappedFromJSONObject:(NSDictionary*) jsonObject;
 
 #pragma mark - mapping
