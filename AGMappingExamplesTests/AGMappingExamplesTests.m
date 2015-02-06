@@ -13,6 +13,8 @@
 #import "AGMovieGenre.h"
 #import "AGPerson.h"
 
+#import "AGMapping.h"
+
 #import "AGMappingManager.h"
 #import "AGMappingPair.h"
 #import "AGMappingPairDate.h"
