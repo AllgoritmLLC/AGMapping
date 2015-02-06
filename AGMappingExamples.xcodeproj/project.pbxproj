@@ -14,25 +14,25 @@
 		BA96026F1A8239D8004D7ABD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA96026E1A8239D8004D7ABD /* Images.xcassets */; };
 		BA9602721A8239D8004D7ABD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9602701A8239D8004D7ABD /* LaunchScreen.xib */; };
 		BA96027E1A8239D8004D7ABD /* AGMappingExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */; };
-		BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */; };
-		BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96028F1A826CA3004D7ABD /* AGMappingManager.m */; };
-		BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602981A826EC9004D7ABD /* AGMappingPair.m */; };
-		BA96029C1A827091004D7ABD /* AGMappingPairBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */; };
-		BA9602A41A82726B004D7ABD /* AGMappingPairNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */; };
-		BA9602A71A82727F004D7ABD /* AGMappingPairString.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A61A82727F004D7ABD /* AGMappingPairString.m */; };
-		BA9602AA1A8272BC004D7ABD /* AGMappingPairObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602A91A8272BC004D7ABD /* AGMappingPairObject.m */; };
-		BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */; };
-		BA9602B01A8272D8004D7ABD /* AGMappingPairCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */; };
-		BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */; };
+		BAB51D571A850B2600A348D9 /* AGMappingClassIsNotMappingComplaintException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D2F1A850B2600A348D9 /* AGMappingClassIsNotMappingComplaintException.m */; };
+		BAB51D581A850B2600A348D9 /* AGMappingClassNameUndefinedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D311A850B2600A348D9 /* AGMappingClassNameUndefinedException.m */; };
+		BAB51D591A850B2600A348D9 /* AGMappingInvalidMappingFormatException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D331A850B2600A348D9 /* AGMappingInvalidMappingFormatException.m */; };
+		BAB51D5A1A850B2600A348D9 /* AGMappingUndefinedObjectPropertyException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D351A850B2600A348D9 /* AGMappingUndefinedObjectPropertyException.m */; };
+		BAB51D5B1A850B2600A348D9 /* AGMappingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D381A850B2600A348D9 /* AGMappingManager.m */; };
+		BAB51D5C1A850B2600A348D9 /* AGMappingPair.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D3B1A850B2600A348D9 /* AGMappingPair.m */; };
+		BAB51D5D1A850B2600A348D9 /* AGMappingPairCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D3E1A850B2600A348D9 /* AGMappingPairCollection.m */; };
+		BAB51D5E1A850B2600A348D9 /* AGMappingPairArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D411A850B2600A348D9 /* AGMappingPairArray.m */; };
+		BAB51D5F1A850B2600A348D9 /* AGMappingPairDate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D431A850B2600A348D9 /* AGMappingPairDate.m */; };
+		BAB51D601A850B2600A348D9 /* AGMappingPairNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D451A850B2600A348D9 /* AGMappingPairNumber.m */; };
+		BAB51D611A850B2600A348D9 /* AGMappingPairObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D471A850B2600A348D9 /* AGMappingPairObject.m */; };
+		BAB51D621A850B2600A348D9 /* AGMappingPairString.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D491A850B2600A348D9 /* AGMappingPairString.m */; };
+		BAB51D631A850B2600A348D9 /* AGMappingPairBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D4B1A850B2600A348D9 /* AGMappingPairBuilder.m */; };
+		BAB51D641A850B2600A348D9 /* NSObject+AGMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D4E1A850B2600A348D9 /* NSObject+AGMapping.m */; };
+		BAB51D651A850B2600A348D9 /* VBException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D541A850B2600A348D9 /* VBException.m */; };
+		BAB51D661A850B2600A348D9 /* VBNotImplementedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB51D561A850B2600A348D9 /* VBNotImplementedException.m */; };
 		BAC8C9651A83AE9200F99897 /* AGMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C9641A83AE9200F99897 /* AGMovie.m */; };
 		BAC8C9681A83AF0100F99897 /* AGMovieGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */; };
 		BAC8C96B1A83B00000F99897 /* AGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C96A1A83B00000F99897 /* AGPerson.m */; };
-		BAEBE2BB1A837C660092E4E5 /* VBException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2B81A837C660092E4E5 /* VBException.m */; };
-		BAEBE2BC1A837C660092E4E5 /* VBNotImplementedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */; };
-		BAEBE2C51A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */; };
-		BAEBE2C81A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */; };
-		BAEBE2CB1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2CA1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m */; };
-		BAEBE2CE1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE2CD1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,47 +59,47 @@
 		BA9602771A8239D8004D7ABD /* AGMappingExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGMappingExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA96027C1A8239D8004D7ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGMappingExamplesTests.m; sourceTree = "<group>"; };
-		BA9602881A823D41004D7ABD /* AGMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGMapping.h; sourceTree = "<group>"; };
-		BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGMapping.h"; sourceTree = "<group>"; };
-		BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGMapping.m"; sourceTree = "<group>"; };
-		BA96028C1A826AF9004D7ABD /* AGMappingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingProtocol.h; sourceTree = "<group>"; };
-		BA96028E1A826CA3004D7ABD /* AGMappingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingManager.h; sourceTree = "<group>"; };
-		BA96028F1A826CA3004D7ABD /* AGMappingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingManager.m; sourceTree = "<group>"; };
-		BA9602971A826EC9004D7ABD /* AGMappingPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPair.h; sourceTree = "<group>"; };
-		BA9602981A826EC9004D7ABD /* AGMappingPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPair.m; sourceTree = "<group>"; };
-		BA96029A1A827091004D7ABD /* AGMappingPairBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairBuilder.h; sourceTree = "<group>"; };
-		BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairBuilder.m; sourceTree = "<group>"; };
-		BA9602A21A82726B004D7ABD /* AGMappingPairNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairNumber.h; sourceTree = "<group>"; };
-		BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairNumber.m; sourceTree = "<group>"; };
-		BA9602A51A82727F004D7ABD /* AGMappingPairString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairString.h; sourceTree = "<group>"; };
-		BA9602A61A82727F004D7ABD /* AGMappingPairString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairString.m; sourceTree = "<group>"; };
-		BA9602A81A8272BC004D7ABD /* AGMappingPairObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairObject.h; sourceTree = "<group>"; };
-		BA9602A91A8272BC004D7ABD /* AGMappingPairObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairObject.m; sourceTree = "<group>"; };
-		BA9602AB1A8272C9004D7ABD /* AGMappingPairDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairDate.h; sourceTree = "<group>"; };
-		BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairDate.m; sourceTree = "<group>"; };
-		BA9602AE1A8272D8004D7ABD /* AGMappingPairCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairCollection.h; sourceTree = "<group>"; };
-		BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairCollection.m; sourceTree = "<group>"; };
-		BA9602B11A8272E8004D7ABD /* AGMappingPairArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairArray.h; sourceTree = "<group>"; };
-		BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairArray.m; sourceTree = "<group>"; };
+		BAB51D2B1A850B2600A348D9 /* AGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMapping.h; sourceTree = "<group>"; };
+		BAB51D2E1A850B2600A348D9 /* AGMappingClassIsNotMappingComplaintException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingClassIsNotMappingComplaintException.h; sourceTree = "<group>"; };
+		BAB51D2F1A850B2600A348D9 /* AGMappingClassIsNotMappingComplaintException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingClassIsNotMappingComplaintException.m; sourceTree = "<group>"; };
+		BAB51D301A850B2600A348D9 /* AGMappingClassNameUndefinedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingClassNameUndefinedException.h; sourceTree = "<group>"; };
+		BAB51D311A850B2600A348D9 /* AGMappingClassNameUndefinedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingClassNameUndefinedException.m; sourceTree = "<group>"; };
+		BAB51D321A850B2600A348D9 /* AGMappingInvalidMappingFormatException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingInvalidMappingFormatException.h; sourceTree = "<group>"; };
+		BAB51D331A850B2600A348D9 /* AGMappingInvalidMappingFormatException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingInvalidMappingFormatException.m; sourceTree = "<group>"; };
+		BAB51D341A850B2600A348D9 /* AGMappingUndefinedObjectPropertyException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingUndefinedObjectPropertyException.h; sourceTree = "<group>"; };
+		BAB51D351A850B2600A348D9 /* AGMappingUndefinedObjectPropertyException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingUndefinedObjectPropertyException.m; sourceTree = "<group>"; };
+		BAB51D371A850B2600A348D9 /* AGMappingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingManager.h; sourceTree = "<group>"; };
+		BAB51D381A850B2600A348D9 /* AGMappingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingManager.m; sourceTree = "<group>"; };
+		BAB51D3A1A850B2600A348D9 /* AGMappingPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPair.h; sourceTree = "<group>"; };
+		BAB51D3B1A850B2600A348D9 /* AGMappingPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPair.m; sourceTree = "<group>"; };
+		BAB51D3D1A850B2600A348D9 /* AGMappingPairCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairCollection.h; sourceTree = "<group>"; };
+		BAB51D3E1A850B2600A348D9 /* AGMappingPairCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairCollection.m; sourceTree = "<group>"; };
+		BAB51D401A850B2600A348D9 /* AGMappingPairArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairArray.h; sourceTree = "<group>"; };
+		BAB51D411A850B2600A348D9 /* AGMappingPairArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairArray.m; sourceTree = "<group>"; };
+		BAB51D421A850B2600A348D9 /* AGMappingPairDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairDate.h; sourceTree = "<group>"; };
+		BAB51D431A850B2600A348D9 /* AGMappingPairDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairDate.m; sourceTree = "<group>"; };
+		BAB51D441A850B2600A348D9 /* AGMappingPairNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairNumber.h; sourceTree = "<group>"; };
+		BAB51D451A850B2600A348D9 /* AGMappingPairNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairNumber.m; sourceTree = "<group>"; };
+		BAB51D461A850B2600A348D9 /* AGMappingPairObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairObject.h; sourceTree = "<group>"; };
+		BAB51D471A850B2600A348D9 /* AGMappingPairObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairObject.m; sourceTree = "<group>"; };
+		BAB51D481A850B2600A348D9 /* AGMappingPairString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairString.h; sourceTree = "<group>"; };
+		BAB51D491A850B2600A348D9 /* AGMappingPairString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairString.m; sourceTree = "<group>"; };
+		BAB51D4A1A850B2600A348D9 /* AGMappingPairBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingPairBuilder.h; sourceTree = "<group>"; };
+		BAB51D4B1A850B2600A348D9 /* AGMappingPairBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairBuilder.m; sourceTree = "<group>"; };
+		BAB51D4C1A850B2600A348D9 /* AGMappingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingProtocol.h; sourceTree = "<group>"; };
+		BAB51D4D1A850B2600A348D9 /* NSObject+AGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AGMapping.h"; sourceTree = "<group>"; };
+		BAB51D4E1A850B2600A348D9 /* NSObject+AGMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGMapping.m"; sourceTree = "<group>"; };
+		BAB51D511A850B2600A348D9 /* VBDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDefines.h; sourceTree = "<group>"; };
+		BAB51D531A850B2600A348D9 /* VBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBException.h; sourceTree = "<group>"; };
+		BAB51D541A850B2600A348D9 /* VBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBException.m; sourceTree = "<group>"; };
+		BAB51D551A850B2600A348D9 /* VBNotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNotImplementedException.h; sourceTree = "<group>"; };
+		BAB51D561A850B2600A348D9 /* VBNotImplementedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNotImplementedException.m; sourceTree = "<group>"; };
 		BAC8C9631A83AE9200F99897 /* AGMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovie.h; sourceTree = "<group>"; };
 		BAC8C9641A83AE9200F99897 /* AGMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovie.m; sourceTree = "<group>"; };
 		BAC8C9661A83AF0100F99897 /* AGMovieGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovieGenre.h; sourceTree = "<group>"; };
 		BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieGenre.m; sourceTree = "<group>"; };
 		BAC8C9691A83B00000F99897 /* AGPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPerson.h; sourceTree = "<group>"; };
 		BAC8C96A1A83B00000F99897 /* AGPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPerson.m; sourceTree = "<group>"; };
-		BAC8C96E1A83B67700F99897 /* VBDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDefines.h; sourceTree = "<group>"; };
-		BAEBE2B71A837C660092E4E5 /* VBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBException.h; sourceTree = "<group>"; };
-		BAEBE2B81A837C660092E4E5 /* VBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBException.m; sourceTree = "<group>"; };
-		BAEBE2B91A837C660092E4E5 /* VBNotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNotImplementedException.h; sourceTree = "<group>"; };
-		BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNotImplementedException.m; sourceTree = "<group>"; };
-		BAEBE2C31A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingClassIsNotMappingComplaintException.h; sourceTree = "<group>"; };
-		BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingClassIsNotMappingComplaintException.m; sourceTree = "<group>"; };
-		BAEBE2C61A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingInvalidMappingFormatException.h; sourceTree = "<group>"; };
-		BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingInvalidMappingFormatException.m; sourceTree = "<group>"; };
-		BAEBE2C91A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingUndefinedObjectPropertyException.h; sourceTree = "<group>"; };
-		BAEBE2CA1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingUndefinedObjectPropertyException.m; sourceTree = "<group>"; };
-		BAEBE2CC1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingClassNameUndefinedException.h; sourceTree = "<group>"; };
-		BAEBE2CD1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingClassNameUndefinedException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 		BA9602551A8239D8004D7ABD = {
 			isa = PBXGroup;
 			children = (
-				BA9602871A823D34004D7ABD /* AGMapping */,
+				BAB51D2A1A850B2600A348D9 /* AGMapping */,
 				BA9602601A8239D8004D7ABD /* AGMappingExamples */,
 				BA96027A1A8239D8004D7ABD /* AGMappingExamplesTests */,
 				BA96025F1A8239D8004D7ABD /* Products */,
@@ -181,66 +181,118 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BA9602871A823D34004D7ABD /* AGMapping */ = {
+		BAB51D2A1A850B2600A348D9 /* AGMapping */ = {
 			isa = PBXGroup;
 			children = (
-				BAEBE2B51A837C660092E4E5 /* frameworks */,
-				BA9602881A823D41004D7ABD /* AGMapping.h */,
-				BA9602891A8266C9004D7ABD /* NSObject+AGMapping.h */,
-				BA96028A1A8266C9004D7ABD /* NSObject+AGMapping.m */,
-				BA96028C1A826AF9004D7ABD /* AGMappingProtocol.h */,
-				BA96028D1A826B8D004D7ABD /* AGMappingPair */,
+				BAB51D2B1A850B2600A348D9 /* AGMapping.h */,
+				BAB51D2C1A850B2600A348D9 /* AGMappingInner */,
+				BAB51D4F1A850B2600A348D9 /* frameworks */,
 			);
 			path = AGMapping;
 			sourceTree = "<group>";
 		};
-		BA96028D1A826B8D004D7ABD /* AGMappingPair */ = {
+		BAB51D2C1A850B2600A348D9 /* AGMappingInner */ = {
 			isa = PBXGroup;
 			children = (
-				BA96028E1A826CA3004D7ABD /* AGMappingManager.h */,
-				BA96028F1A826CA3004D7ABD /* AGMappingManager.m */,
-				BAEBE2C31A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.h */,
-				BAEBE2C41A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m */,
-				BAEBE2C61A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.h */,
-				BAEBE2C71A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m */,
-				BA96029A1A827091004D7ABD /* AGMappingPairBuilder.h */,
-				BA96029B1A827091004D7ABD /* AGMappingPairBuilder.m */,
-				BAEBE2C91A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.h */,
-				BAEBE2CA1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m */,
-				BA9602971A826EC9004D7ABD /* AGMappingPair.h */,
-				BA9602981A826EC9004D7ABD /* AGMappingPair.m */,
-				BA96029D1A827242004D7ABD /* AGMappingPairConcrete */,
+				BAB51D2D1A850B2600A348D9 /* AGMappingExceptions */,
+				BAB51D361A850B2600A348D9 /* AGMappingManager */,
+				BAB51D4C1A850B2600A348D9 /* AGMappingProtocol.h */,
+				BAB51D4D1A850B2600A348D9 /* NSObject+AGMapping.h */,
+				BAB51D4E1A850B2600A348D9 /* NSObject+AGMapping.m */,
+			);
+			path = AGMappingInner;
+			sourceTree = "<group>";
+		};
+		BAB51D2D1A850B2600A348D9 /* AGMappingExceptions */ = {
+			isa = PBXGroup;
+			children = (
+				BAB51D2E1A850B2600A348D9 /* AGMappingClassIsNotMappingComplaintException.h */,
+				BAB51D2F1A850B2600A348D9 /* AGMappingClassIsNotMappingComplaintException.m */,
+				BAB51D301A850B2600A348D9 /* AGMappingClassNameUndefinedException.h */,
+				BAB51D311A850B2600A348D9 /* AGMappingClassNameUndefinedException.m */,
+				BAB51D321A850B2600A348D9 /* AGMappingInvalidMappingFormatException.h */,
+				BAB51D331A850B2600A348D9 /* AGMappingInvalidMappingFormatException.m */,
+				BAB51D341A850B2600A348D9 /* AGMappingUndefinedObjectPropertyException.h */,
+				BAB51D351A850B2600A348D9 /* AGMappingUndefinedObjectPropertyException.m */,
+			);
+			path = AGMappingExceptions;
+			sourceTree = "<group>";
+		};
+		BAB51D361A850B2600A348D9 /* AGMappingManager */ = {
+			isa = PBXGroup;
+			children = (
+				BAB51D371A850B2600A348D9 /* AGMappingManager.h */,
+				BAB51D381A850B2600A348D9 /* AGMappingManager.m */,
+				BAB51D391A850B2600A348D9 /* AGMappingPair */,
+				BAB51D4A1A850B2600A348D9 /* AGMappingPairBuilder.h */,
+				BAB51D4B1A850B2600A348D9 /* AGMappingPairBuilder.m */,
+			);
+			path = AGMappingManager;
+			sourceTree = "<group>";
+		};
+		BAB51D391A850B2600A348D9 /* AGMappingPair */ = {
+			isa = PBXGroup;
+			children = (
+				BAB51D3A1A850B2600A348D9 /* AGMappingPair.h */,
+				BAB51D3B1A850B2600A348D9 /* AGMappingPair.m */,
+				BAB51D3C1A850B2600A348D9 /* AGMappingPairConcrete */,
 			);
 			path = AGMappingPair;
 			sourceTree = "<group>";
 		};
-		BA96029D1A827242004D7ABD /* AGMappingPairConcrete */ = {
+		BAB51D3C1A850B2600A348D9 /* AGMappingPairConcrete */ = {
 			isa = PBXGroup;
 			children = (
-				BAEBE2CC1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.h */,
-				BAEBE2CD1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m */,
-				BA9602A21A82726B004D7ABD /* AGMappingPairNumber.h */,
-				BA9602A31A82726B004D7ABD /* AGMappingPairNumber.m */,
-				BA9602A51A82727F004D7ABD /* AGMappingPairString.h */,
-				BA9602A61A82727F004D7ABD /* AGMappingPairString.m */,
-				BA9602A81A8272BC004D7ABD /* AGMappingPairObject.h */,
-				BA9602A91A8272BC004D7ABD /* AGMappingPairObject.m */,
-				BA9602AB1A8272C9004D7ABD /* AGMappingPairDate.h */,
-				BA9602AC1A8272C9004D7ABD /* AGMappingPairDate.m */,
-				BA9602AE1A8272D8004D7ABD /* AGMappingPairCollection.h */,
-				BA9602AF1A8272D8004D7ABD /* AGMappingPairCollection.m */,
-				BA96029E1A827242004D7ABD /* AGMappingPairCollection */,
+				BAB51D3D1A850B2600A348D9 /* AGMappingPairCollection.h */,
+				BAB51D3E1A850B2600A348D9 /* AGMappingPairCollection.m */,
+				BAB51D3F1A850B2600A348D9 /* AGMappingPairCollections */,
+				BAB51D421A850B2600A348D9 /* AGMappingPairDate.h */,
+				BAB51D431A850B2600A348D9 /* AGMappingPairDate.m */,
+				BAB51D441A850B2600A348D9 /* AGMappingPairNumber.h */,
+				BAB51D451A850B2600A348D9 /* AGMappingPairNumber.m */,
+				BAB51D461A850B2600A348D9 /* AGMappingPairObject.h */,
+				BAB51D471A850B2600A348D9 /* AGMappingPairObject.m */,
+				BAB51D481A850B2600A348D9 /* AGMappingPairString.h */,
+				BAB51D491A850B2600A348D9 /* AGMappingPairString.m */,
 			);
 			path = AGMappingPairConcrete;
 			sourceTree = "<group>";
 		};
-		BA96029E1A827242004D7ABD /* AGMappingPairCollection */ = {
+		BAB51D3F1A850B2600A348D9 /* AGMappingPairCollections */ = {
 			isa = PBXGroup;
 			children = (
-				BA9602B11A8272E8004D7ABD /* AGMappingPairArray.h */,
-				BA9602B21A8272E8004D7ABD /* AGMappingPairArray.m */,
+				BAB51D401A850B2600A348D9 /* AGMappingPairArray.h */,
+				BAB51D411A850B2600A348D9 /* AGMappingPairArray.m */,
 			);
-			path = AGMappingPairCollection;
+			path = AGMappingPairCollections;
+			sourceTree = "<group>";
+		};
+		BAB51D4F1A850B2600A348D9 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAB51D501A850B2600A348D9 /* VBDefines */,
+				BAB51D521A850B2600A348D9 /* VBException */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		BAB51D501A850B2600A348D9 /* VBDefines */ = {
+			isa = PBXGroup;
+			children = (
+				BAB51D511A850B2600A348D9 /* VBDefines.h */,
+			);
+			path = VBDefines;
+			sourceTree = "<group>";
+		};
+		BAB51D521A850B2600A348D9 /* VBException */ = {
+			isa = PBXGroup;
+			children = (
+				BAB51D531A850B2600A348D9 /* VBException.h */,
+				BAB51D541A850B2600A348D9 /* VBException.m */,
+				BAB51D551A850B2600A348D9 /* VBNotImplementedException.h */,
+				BAB51D561A850B2600A348D9 /* VBNotImplementedException.m */,
+			);
+			path = VBException;
 			sourceTree = "<group>";
 		};
 		BAC8C96C1A83B5A300F99897 /* objects */ = {
@@ -254,34 +306,6 @@
 				BAC8C96A1A83B00000F99897 /* AGPerson.m */,
 			);
 			name = objects;
-			sourceTree = "<group>";
-		};
-		BAC8C96D1A83B67700F99897 /* VBDefines */ = {
-			isa = PBXGroup;
-			children = (
-				BAC8C96E1A83B67700F99897 /* VBDefines.h */,
-			);
-			path = VBDefines;
-			sourceTree = "<group>";
-		};
-		BAEBE2B51A837C660092E4E5 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BAC8C96D1A83B67700F99897 /* VBDefines */,
-				BAEBE2B61A837C660092E4E5 /* VBException */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
-		BAEBE2B61A837C660092E4E5 /* VBException */ = {
-			isa = PBXGroup;
-			children = (
-				BAEBE2B71A837C660092E4E5 /* VBException.h */,
-				BAEBE2B81A837C660092E4E5 /* VBException.m */,
-				BAEBE2B91A837C660092E4E5 /* VBNotImplementedException.h */,
-				BAEBE2BA1A837C660092E4E5 /* VBNotImplementedException.m */,
-			);
-			path = VBException;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,28 +408,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAEBE2CE1A83A1180092E4E5 /* AGMappingClassNameUndefinedException.m in Sources */,
-				BA9602B31A8272E8004D7ABD /* AGMappingPairArray.m in Sources */,
-				BA9602AD1A8272C9004D7ABD /* AGMappingPairDate.m in Sources */,
 				BA96026A1A8239D8004D7ABD /* ViewController.m in Sources */,
-				BAEBE2BB1A837C660092E4E5 /* VBException.m in Sources */,
-				BA9602A41A82726B004D7ABD /* AGMappingPairNumber.m in Sources */,
 				BA9602671A8239D8004D7ABD /* AppDelegate.m in Sources */,
-				BA9602B01A8272D8004D7ABD /* AGMappingPairCollection.m in Sources */,
-				BA9602A71A82727F004D7ABD /* AGMappingPairString.m in Sources */,
-				BAEBE2C51A8385050092E4E5 /* AGMappingClassIsNotMappingComplaintException.m in Sources */,
-				BAEBE2CB1A839A4B0092E4E5 /* AGMappingUndefinedObjectPropertyException.m in Sources */,
-				BAEBE2BC1A837C660092E4E5 /* VBNotImplementedException.m in Sources */,
+				BAB51D5E1A850B2600A348D9 /* AGMappingPairArray.m in Sources */,
+				BAB51D621A850B2600A348D9 /* AGMappingPairString.m in Sources */,
+				BAB51D571A850B2600A348D9 /* AGMappingClassIsNotMappingComplaintException.m in Sources */,
+				BAB51D5F1A850B2600A348D9 /* AGMappingPairDate.m in Sources */,
+				BAB51D641A850B2600A348D9 /* NSObject+AGMapping.m in Sources */,
 				BAC8C9651A83AE9200F99897 /* AGMovie.m in Sources */,
 				BAC8C9681A83AF0100F99897 /* AGMovieGenre.m in Sources */,
+				BAB51D611A850B2600A348D9 /* AGMappingPairObject.m in Sources */,
+				BAB51D651A850B2600A348D9 /* VBException.m in Sources */,
+				BAB51D581A850B2600A348D9 /* AGMappingClassNameUndefinedException.m in Sources */,
+				BAB51D661A850B2600A348D9 /* VBNotImplementedException.m in Sources */,
+				BAB51D5D1A850B2600A348D9 /* AGMappingPairCollection.m in Sources */,
+				BAB51D601A850B2600A348D9 /* AGMappingPairNumber.m in Sources */,
+				BAB51D631A850B2600A348D9 /* AGMappingPairBuilder.m in Sources */,
 				BAC8C96B1A83B00000F99897 /* AGPerson.m in Sources */,
-				BA96028B1A8266C9004D7ABD /* NSObject+AGMapping.m in Sources */,
-				BA9602901A826CA3004D7ABD /* AGMappingManager.m in Sources */,
-				BA9602991A826EC9004D7ABD /* AGMappingPair.m in Sources */,
-				BA9602AA1A8272BC004D7ABD /* AGMappingPairObject.m in Sources */,
-				BA96029C1A827091004D7ABD /* AGMappingPairBuilder.m in Sources */,
-				BAEBE2C81A838EEC0092E4E5 /* AGMappingInvalidMappingFormatException.m in Sources */,
 				BA9602641A8239D8004D7ABD /* main.m in Sources */,
+				BAB51D591A850B2600A348D9 /* AGMappingInvalidMappingFormatException.m in Sources */,
+				BAB51D5B1A850B2600A348D9 /* AGMappingManager.m in Sources */,
+				BAB51D5C1A850B2600A348D9 /* AGMappingPair.m in Sources */,
+				BAB51D5A1A850B2600A348D9 /* AGMappingUndefinedObjectPropertyException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
