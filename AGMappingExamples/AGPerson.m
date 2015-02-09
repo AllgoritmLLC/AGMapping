@@ -13,7 +13,9 @@
 + (NSDictionary *) mappingFromJSONToObject {
     return @{@"id":     @"identifier",
              @"name":   @"name",
-             @"shotDates":  @[@"castDates", @"NSDate", @"yyyy/MM/dd"]};
+             @"shotDates":  @{kAGMappingToKey:          @"castDates",
+                              kAGMappingClassNameKey:   @"NSDate",
+                              kAGMappingDateFormatKey:  @"yyyy/MM/dd"}};
 }
 
 @end

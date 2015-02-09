@@ -79,7 +79,7 @@
     
     NSDictionary* dictMapping = [objectClass mappingFromJSONToObject];
     [self validateMappingOfClass:objectClass
-                      Dictionary:dictMapping];
+                  withDictionary:dictMapping];
     
     NSMutableArray* mappingPairs = [NSMutableArray new];
     for (NSString* keyFrom in dictMapping) {
@@ -90,12 +90,10 @@
             pair = [builder mappingPairWithKeyPathFrom:keyFrom
                                                  keyTo:keyTo];
 
-        }else if ([keyTo isKindOfClass:[NSArray class]]) {
-            NSMutableArray* params = [NSMutableArray arrayWithArray:keyTo];
-            [params removeObjectAtIndex:0];
+        }else if ([keyTo isKindOfClass:[NSDictionary class]]) {
             pair = [builder mappingPairWithKeyPathFrom:keyFrom
-                                                 keyTo:keyTo[0]
-                                                params:params];
+                                                 keyTo:keyTo[kAGMappingToKey]
+                                                params:keyTo];
         }
         
         if (pair) {
@@ -109,7 +107,7 @@
 }
 
 - (void) validateMappingOfClass:(Class)objectClass
-                     Dictionary:(NSDictionary*) dictMapping {
+                 withDictionary:(NSDictionary*) dictMapping {
     for (id keyPathFrom in dictMapping) {
         if ([keyPathFrom isKindOfClass:[NSString class]] == NO) {
             @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass
@@ -118,15 +116,16 @@
         
         id keyTo = dictMapping[keyPathFrom];
         if ([keyTo isKindOfClass:[NSString class]] == NO &&
-            [keyTo isKindOfClass:[NSArray class]] == NO) {
+            [keyTo isKindOfClass:[NSDictionary class]] == NO) {
             @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass
                                                                                      keyTo:keyTo];
         }
         
-        if ([keyTo isKindOfClass:[NSArray class]]) {
-            NSArray* keyToArray = (NSArray*)keyTo;
-            for (id keyToEntry in keyToArray) {
-                if ([keyToEntry isKindOfClass:[NSString class]] == NO) {
+        if ([keyTo isKindOfClass:[NSDictionary class]]) {
+            NSDictionary* keyToDict = (NSDictionary*)keyTo;
+            for (id keyToEntry in keyToDict.allKeys) {
+                id value = keyToDict[keyToEntry];
+                if ([keyToEntry isKindOfClass:[NSString class]] == NO || [value isKindOfClass:[NSString class]] == NO) {
                     @throw [AGMappingInvalidMappingFormatException exceptionWithMappingObjectClass:objectClass
                                                                                         keyToEntry:keyToEntry];
                 }

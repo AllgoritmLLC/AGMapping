@@ -32,6 +32,8 @@
 
 #import "AGMappingUndefinedObjectPropertyException.h"
 
+#import "AGMappingProtocol.h"
+
 @interface AGMappingPairBuilder ()
 
 @property (nonatomic, strong) NSDictionary* typesOfProperties;
@@ -61,7 +63,7 @@
 
 - (AGMappingPair*) mappingPairWithKeyPathFrom:(NSString*) keyPathFrom
                                         keyTo:(NSString*) keyTo
-                                       params:(NSArray*) params {
+                                       params:(NSDictionary*) params {
     
     NSString* keyToPropertyType = self.typesOfProperties[keyTo];
     if (keyToPropertyType == nil) {
@@ -79,25 +81,25 @@
                                                          keyTo:keyTo];
 
     }else if ([keyToPropertyType isEqualToString:@"NSDate"]) {
-        if (params.count == 1) {
+        if (params[kAGMappingDateFormatKey]) {
             pair = [AGMappingPairDate mappingPairWithKeyPathFrom:keyPathFrom
                                                            keyTo:keyTo
-                                                      dateFormat:params[0]];
+                                                      dateFormat:params[kAGMappingDateFormatKey]];
         }else{
             pair = [AGMappingPairDate mappingPairWithKeyPathFrom:keyPathFrom
                                                            keyTo:keyTo];
         }
 
     }else if ([keyToPropertyType isEqualToString:@"NSArray"]) {
-        if (params.count == 1) {
+        if (params[kAGMappingClassNameKey]) {
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
                                                             keyTo:keyTo
-                                                   entryClassName:params[0]];
-        }else if (params.count == 2) {
+                                                   entryClassName:params[kAGMappingClassNameKey]];
+        }else if (params[kAGMappingClassNameKey] && params[kAGMappingDateFormatKey]) {
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
                                                             keyTo:keyTo
-                                                   entryClassName:params[0]
-                                                   entryClassInfo:params[1]];
+                                                   entryClassName:params[kAGMappingClassNameKey]
+                                                   entryClassInfo:params[kAGMappingDateFormatKey]];
             
         }else{
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
@@ -105,10 +107,10 @@
         }
         
     }else {
-        if (params.count == 1) {
+        if (params[kAGMappingClassNameKey]) {
             pair = [AGMappingPairObject mappingPairWithKeyPathFrom:keyPathFrom
                                                              keyTo:keyTo
-                                                         className:params[0]];
+                                                         className:params[kAGMappingClassNameKey]];
         }else{
             pair = [AGMappingPairObject mappingPairWithKeyPathFrom:keyPathFrom
                                                              keyTo:keyTo

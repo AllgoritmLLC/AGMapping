@@ -14,9 +14,12 @@
     return @{@"id":                     @"identifier",
              @"poster.poster_small":    @"urlSmall",
              @"genre":                  @"genre",
-             @"cast":                   @[@"cast", @"AGPerson"],
-             @"date":                   @[@"releaseDate", @"yyyy/MM/dd"],
-             @"countries":              @[@"countries", @"NSString"]};
+             @"cast":                   @{kAGMappingToKey:          @"cast",
+                                          kAGMappingClassNameKey:   @"AGPerson"},
+             @"date":                   @{kAGMappingToKey:          @"releaseDate",
+                                          kAGMappingDateFormatKey:  @"yyyy/MM/dd"},
+             @"countries":              @{kAGMappingToKey:          @"countries",
+                                          kAGMappingClassNameKey:   @"NSString"}};
 }
 
 @end

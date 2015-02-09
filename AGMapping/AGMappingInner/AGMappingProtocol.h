@@ -24,6 +24,10 @@
 
 #import <Foundation/Foundation.h>
 
+#define kAGMappingToKey         @"kAGMappingToKey"
+#define kAGMappingClassNameKey  @"kAGMappingClassNameKey"
+#define kAGMappingDateFormatKey @"kAGMappingDateFormatKey"
+
 @protocol AGMappingProtocol <NSObject>
 
 + (NSDictionary*) mappingFromJSONToObject;
