@@ -35,4 +35,5 @@
 + (id) objectWithJSONValue:(id)jsonValue
                 dateFormat:(NSString*)dateFormat;
 
+    
 @end
