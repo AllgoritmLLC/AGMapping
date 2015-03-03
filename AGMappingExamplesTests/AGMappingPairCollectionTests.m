@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "AGMappingPairArray.h"
+#import "AGMappingPairCollection.h"
 #import "AGMappingClassNameUndefinedException.h"
 #import "AGMyClass.h"
 
@@ -35,7 +35,7 @@
 }
 
 -(void)testThatItTwhrowsExceptionOnInitWithoutClassname {
-    XCTAssertThrowsSpecific([AGMappingPairArray mappingPairWithKeyPathFrom:@"someField.objInner"
+    XCTAssertThrowsSpecific([AGMappingPairCollection mappingPairWithKeyPathFrom:@"someField.objInner"
                                                                           keyTo:@"objInner"], AGMappingClassNameUndefinedException);
 }
 
