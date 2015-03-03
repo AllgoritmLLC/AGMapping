@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "AGMyClass.h"
+#import "AGMock.h"
 #import "AGMappingPairString.h"
 #import "AGMappingTestcase.h"
 
@@ -29,7 +29,7 @@
 }
 
 - (void) testThatItMapsString {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                    @"string": @"123"
@@ -44,7 +44,7 @@
 }
 
 - (void) testThatItMapsUndefinedToNil {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{}
                            };
@@ -60,8 +60,8 @@
 }
 
 -(void) testThatItMapsObjectToString {
-    AGMyClass *obj = [self createTestObj];
-    AGMyClass *objInner = [self createTestObj];
+    AGMock *obj = [self createTestObj];
+    AGMock *objInner = [self createTestObj];
     objInner.string = @"1";
     objInner.number = @(1);
     NSDictionary *dict = @{

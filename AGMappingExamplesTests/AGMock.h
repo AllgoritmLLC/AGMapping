@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AGMyClass : UINavigationItem
+@interface AGMock : UINavigationItem
 
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSNumber *number;
 @property (nonatomic, strong) NSString *string;
 @property (nonatomic, strong) NSArray *array;
-@property (nonatomic, strong) AGMyClass *objInner;
+@property (nonatomic, strong) AGMock *objInner;
 
 @end

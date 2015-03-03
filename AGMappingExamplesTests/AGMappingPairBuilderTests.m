@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "AGMappingPairBuilder.h"
-#import "AGMyClass.h"
+#import "AGMock.h"
+
 #import "AGMappingPairString.h"
 #import "AGMappingPairArray.h"
 #import "AGMappingPairNumber.h"
@@ -36,34 +37,34 @@
 
 - (void)testThatItSetsMappingObjectClassAndTypesOfPropierties {
     AGMappingPairBuilder *mpb = [[AGMappingPairBuilder alloc] init];
-    mpb.mappingObjectClass = [AGMyClass class];
+    mpb.mappingObjectClass = [AGMock class];
     NSDictionary *typesOfProperties = [mpb valueForKeyPath:@"typesOfProperties"];
     
     XCTAssertTrue([typesOfProperties[@"number"] isEqualToString:@"NSNumber"]);
     XCTAssertTrue([typesOfProperties[@"string"] isEqualToString:@"NSString"]);
     XCTAssertTrue([typesOfProperties[@"date"] isEqualToString:@"NSDate"]);
-    XCTAssertTrue([typesOfProperties[@"objInner"] isEqualToString:@"AGMyClass"]);
+    XCTAssertTrue([typesOfProperties[@"objInner"] isEqualToString:@"AGMock"]);
     XCTAssertTrue([typesOfProperties[@"array"] isEqualToString:@"NSArray"]);
 }
 
 - (void)testThatItCreatesStringPairWithGivenPrams {
     AGMappingPairBuilder *mpb = [[AGMappingPairBuilder alloc] init];
-    mpb.mappingObjectClass = [AGMyClass class];
+    mpb.mappingObjectClass = [AGMock class];
     AGMappingPair *pair = [mpb mappingPairWithKeyPathFrom:@"string" keyTo:@"string"];
     XCTAssertEqual(pair.keyTo, @"string");
     XCTAssertEqual(pair.keyPathFrom, @"string");
-    XCTAssertEqual([pair class], [AGMappingPairString class]);
+    XCTAssertTrue([pair isKindOfClass:[AGMappingPairString class]]);
 }
 
 - (void)testThatItCreatesArrayPairWithGivenPrams {
     AGMappingPairBuilder *mpb = [[AGMappingPairBuilder alloc] init];
-    mpb.mappingObjectClass = [AGMyClass class];
+    mpb.mappingObjectClass = [AGMock class];
     AGMappingPair *pair = [mpb mappingPairWithKeyPathFrom:@"string"
                                                     keyTo:@"array"
                                                    params:@{
                                                             kAGMappingClassNameKey: @"NSNumber"
                                                             }];
-    XCTAssertEqual([pair class], [AGMappingPairArray class]);
+    XCTAssertTrue([pair isKindOfClass:[AGMappingPairArray class]]);
     XCTAssertEqual(pair.keyPathFrom, @"string");
     XCTAssertEqual(pair.keyTo, @"array");
     XCTAssertEqual(((AGMappingPairArray *)pair).entryClassName, @"NSNumber");
@@ -71,23 +72,23 @@
 
 - (void)testThatItCreatesNumberPairWithGivenPrams {
     AGMappingPairBuilder *mpb = [[AGMappingPairBuilder alloc] init];
-    mpb.mappingObjectClass = [AGMyClass class];
+    mpb.mappingObjectClass = [AGMock class];
     AGMappingPair *pair = [mpb mappingPairWithKeyPathFrom:@"string"
                                                     keyTo:@"number"];
-    XCTAssertEqual([pair class], [AGMappingPairNumber class]);
+    XCTAssertTrue([pair isKindOfClass:[AGMappingPairNumber class]]);
     XCTAssertEqual(pair.keyPathFrom, @"string");
     XCTAssertEqual(pair.keyTo, @"number");
 }
 
 - (void)testThatItCreatesDatePairWithGivenPrams {
     AGMappingPairBuilder *mpb = [[AGMappingPairBuilder alloc] init];
-    mpb.mappingObjectClass = [AGMyClass class];
+    mpb.mappingObjectClass = [AGMock class];
     AGMappingPair *pair = [mpb mappingPairWithKeyPathFrom:@"string"
                                                     keyTo:@"date"
                                                    params:@{
                                                             kAGMappingDateFormatKey:@"yyyy"
                                                             }];
-    XCTAssertEqual([pair class], [AGMappingPairDate class]);
+    XCTAssertTrue([pair isKindOfClass:[AGMappingPairDate class]]);
     XCTAssertEqual(pair.keyPathFrom, @"string");
     XCTAssertEqual(pair.keyTo, @"date");
     XCTAssertEqual(((AGMappingPairDate *)pair).dateFormat, @"yyyy");
@@ -95,10 +96,10 @@
 
 - (void)testThatItCreatesObjectPairWithGivenPrams {
     AGMappingPairBuilder *mpb = [[AGMappingPairBuilder alloc] init];
-    mpb.mappingObjectClass = [AGMyClass class];
+    mpb.mappingObjectClass = [AGMock class];
     AGMappingPair *pair = [mpb mappingPairWithKeyPathFrom:@"string"
                                                     keyTo:@"objInner"];
-    XCTAssertEqual([pair class], [AGMappingPairObject class]);
+    XCTAssertTrue([pair isKindOfClass:[AGMappingPairObject class]]);
     XCTAssertEqual(pair.keyPathFrom, @"string");
     XCTAssertEqual(pair.keyTo, @"objInner");
 }

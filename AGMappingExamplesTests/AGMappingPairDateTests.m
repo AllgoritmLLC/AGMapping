@@ -71,7 +71,7 @@
 }
 
 - (void) testThatItMapsStringToDate {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                             @"date": @"20-05-1989"
@@ -85,7 +85,7 @@
 }
 
 - (void) testThatItMapsTimetampToDate {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                    @"date": @(611611200)

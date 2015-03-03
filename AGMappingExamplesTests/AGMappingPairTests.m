@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "AGMyClass.h"
+#import "AGMock.h"
 #import "AGMappingPair.h"
 #import "AGMappingTestcase.h"
 #import "VBNotImplementedException.h"
@@ -37,7 +37,7 @@
 }
 
 - (void)testThatItMaps {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                    @"array": @[@(1), @(2)]

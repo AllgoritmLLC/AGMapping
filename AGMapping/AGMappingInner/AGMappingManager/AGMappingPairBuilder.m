@@ -91,6 +91,7 @@
         }
 
     }else if ([keyToPropertyType isEqualToString:@"NSArray"]) {
+
         if (params[kAGMappingClassNameKey] && params[kAGMappingDateFormatKey]) {
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
                                                             keyTo:keyTo

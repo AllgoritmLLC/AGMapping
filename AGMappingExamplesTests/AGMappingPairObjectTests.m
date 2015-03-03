@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "AGMappingTestcase.h"
-#import "AGMyClass.h"
+#import "AGMock.h"
 #import "AGMappingPairObject.h"
 #import "AGMappingClassNameUndefinedException.h"
 
@@ -30,11 +30,11 @@
 }
 
 -(void) testThatItMapsObject {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     AGMappingPairObject *mpObject = [AGMappingPairObject mappingPairWithKeyPathFrom:@"someField.objInner"
                                                                               keyTo:@"objInner"
-                                                                          className:@"AGMyClass"];
-    AGMyClass *objInner = [self createTestObj];
+                                                                          className:@"AGMock"];
+    AGMock *objInner = [self createTestObj];
     objInner.string = @"1";
     objInner.number = @(1);
     NSDictionary *dict = @{
@@ -51,7 +51,7 @@
 }
 
 - (void)testThatItMapsUndefinedToNil {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{}
                            };

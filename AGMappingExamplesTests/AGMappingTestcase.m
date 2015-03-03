@@ -9,7 +9,7 @@
 #import "AGMappingTestcase.h"
 
 @implementation AGMappingTestcase
--(AGMyClass *) createTestObj {
-    return [[AGMyClass alloc] init];
+-(AGMock *) createTestObj {
+    return [[AGMock alloc] init];
 }
 @end

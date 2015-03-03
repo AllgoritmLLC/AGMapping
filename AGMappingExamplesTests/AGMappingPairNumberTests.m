@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "AGMyClass.h"
+#import "AGMock.h"
 #import "AGMappingPairNumber.h"
 #import "AGMappingTestcase.h"
 @interface AGMappingPairNumberTests : AGMappingTestcase
@@ -28,7 +28,7 @@
 }
 
 - (void)testThatItMapsNumber {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                    @"number": @(123)
@@ -41,7 +41,7 @@
 }
 
 - (void)testThatItMapsUndefinedToNil {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{}
                           };
@@ -58,7 +58,7 @@
 
 
 - (void)testThatItMapsStringToNumber {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                             @"number": @"123"
@@ -71,7 +71,7 @@
 }
 
 - (void)testThatItMapsFloatingPointStringToNumber {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                    @"number": @"123.43"

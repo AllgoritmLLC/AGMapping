@@ -10,7 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "AGMappingPairCollection.h"
 #import "AGMappingClassNameUndefinedException.h"
-#import "AGMyClass.h"
+#import "AGMock.h"
 
 @interface AGMappingPairCollectionTests : XCTestCase
 
@@ -63,8 +63,8 @@
 -(void) testThatItRetrievesEntryClassWithGivenEntryClassName {
     AGMappingPairCollection *mpCollection = [AGMappingPairCollection mappingPairWithKeyPathFrom:@"from"
                                                                                           keyTo:@"to"
-                                                                                 entryClassName:@"AGMyClass"];
-    XCTAssertEqual(mpCollection.entryClass, [AGMyClass class]);
+                                                                                 entryClassName:@"AGMock"];
+    XCTAssertEqual(mpCollection.entryClass, [AGMock class]);
 }
 
 -(void) testThatItMapsEntryStringToString {
@@ -81,11 +81,11 @@
 }
 
 -(void) testThatItMapsEntryObjectToObject {
-    AGMyClass *obj = [AGMappingPairCollection objectWithJSONValue:@{
+    AGMock *obj = [AGMappingPairCollection objectWithJSONValue:@{
                                                                     @"number": @(1),
                                                                     @"string": @"1"
                                                                     }
-                                                       entryClass:[AGMyClass class]
+                                                       entryClass:[AGMock class]
                                                    entryClassInfo:nil];
 
     XCTAssertEqual(obj.number, @(1));

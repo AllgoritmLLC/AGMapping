@@ -34,7 +34,7 @@
 		BAC8C9681A83AF0100F99897 /* AGMovieGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */; };
 		BAC8C96B1A83B00000F99897 /* AGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C96A1A83B00000F99897 /* AGPerson.m */; };
 		CED4555C1AA43A8C005EE426 /* AGMappingPairDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */; };
-		CED4556E1AA453D3005EE426 /* AGMyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4556D1AA453D3005EE426 /* AGMyClass.m */; };
+		CED4556E1AA453D3005EE426 /* AGMock.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4556D1AA453D3005EE426 /* AGMock.m */; };
 		CED455701AA45DD5005EE426 /* AGMappingPairNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */; };
 		CED455721AA467FE005EE426 /* AGMappingPairStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */; };
 		CED455771AA46AB8005EE426 /* AGMappingTestcase.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455761AA46AB8005EE426 /* AGMappingTestcase.m */; };
@@ -43,6 +43,10 @@
 		CED4557F1AA5B0AD005EE426 /* AGMappingPairArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */; };
 		CED455831AA5BEE8005EE426 /* AGMappingPairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */; };
 		CED455851AA5DBE4005EE426 /* AGMappingPairBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */; };
+		CED455871AA5EF75005EE426 /* AGMappingManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455861AA5EF75005EE426 /* AGMappingManagerTests.m */; };
+		CED4558B1AA5F694005EE426 /* AGMappingTestsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4558A1AA5F694005EE426 /* AGMappingTestsHelper.m */; };
+		CED455921AA6041A005EE426 /* AGInvalidMapKeyToMock.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455911AA6041A005EE426 /* AGInvalidMapKeyToMock.m */; };
+		CED455951AA605BC005EE426 /* AGInvalidMapKeyFromMock.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455941AA605BC005EE426 /* AGInvalidMapKeyFromMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +115,8 @@
 		BAC8C9691A83B00000F99897 /* AGPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPerson.h; sourceTree = "<group>"; };
 		BAC8C96A1A83B00000F99897 /* AGPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPerson.m; sourceTree = "<group>"; };
 		CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairDateTests.m; sourceTree = "<group>"; };
-		CED4556C1AA453D3005EE426 /* AGMyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMyClass.h; sourceTree = "<group>"; };
-		CED4556D1AA453D3005EE426 /* AGMyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMyClass.m; sourceTree = "<group>"; };
+		CED4556C1AA453D3005EE426 /* AGMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMock.h; sourceTree = "<group>"; };
+		CED4556D1AA453D3005EE426 /* AGMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMock.m; sourceTree = "<group>"; };
 		CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairNumberTests.m; sourceTree = "<group>"; };
 		CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairStringTests.m; sourceTree = "<group>"; };
 		CED455751AA46AB8005EE426 /* AGMappingTestcase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingTestcase.h; sourceTree = "<group>"; };
@@ -122,6 +126,13 @@
 		CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairArrayTests.m; sourceTree = "<group>"; };
 		CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairTests.m; sourceTree = "<group>"; };
 		CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairBuilderTests.m; sourceTree = "<group>"; };
+		CED455861AA5EF75005EE426 /* AGMappingManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingManagerTests.m; sourceTree = "<group>"; };
+		CED455891AA5F694005EE426 /* AGMappingTestsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingTestsHelper.h; sourceTree = "<group>"; };
+		CED4558A1AA5F694005EE426 /* AGMappingTestsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingTestsHelper.m; sourceTree = "<group>"; };
+		CED455901AA6041A005EE426 /* AGInvalidMapKeyToMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGInvalidMapKeyToMock.h; sourceTree = "<group>"; };
+		CED455911AA6041A005EE426 /* AGInvalidMapKeyToMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGInvalidMapKeyToMock.m; sourceTree = "<group>"; };
+		CED455931AA605BC005EE426 /* AGInvalidMapKeyFromMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGInvalidMapKeyFromMock.h; sourceTree = "<group>"; };
+		CED455941AA605BC005EE426 /* AGInvalidMapKeyFromMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGInvalidMapKeyFromMock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,20 +200,13 @@
 		BA96027A1A8239D8004D7ABD /* AGMappingExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
-				CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */,
+				CED4558C1AA60055005EE426 /* Mocks */,
+				CED455881AA5F5EB005EE426 /* AGMappingPairTests */,
 				BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */,
 				BA96027B1A8239D8004D7ABD /* Supporting Files */,
-				CED4556C1AA453D3005EE426 /* AGMyClass.h */,
-				CED4556D1AA453D3005EE426 /* AGMyClass.m */,
-				CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */,
-				CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */,
-				CED455751AA46AB8005EE426 /* AGMappingTestcase.h */,
-				CED455761AA46AB8005EE426 /* AGMappingTestcase.m */,
-				CED455781AA49FC7005EE426 /* AGMappingPairObjectTests.m */,
-				CED4557C1AA59639005EE426 /* AGMappingPairCollectionTests.m */,
-				CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */,
-				CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */,
-				CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */,
+				CED455861AA5EF75005EE426 /* AGMappingManagerTests.m */,
+				CED455891AA5F694005EE426 /* AGMappingTestsHelper.h */,
+				CED4558A1AA5F694005EE426 /* AGMappingTestsHelper.m */,
 			);
 			path = AGMappingExamplesTests;
 			sourceTree = "<group>";
@@ -342,6 +346,36 @@
 			name = objects;
 			sourceTree = "<group>";
 		};
+		CED455881AA5F5EB005EE426 /* AGMappingPairTests */ = {
+			isa = PBXGroup;
+			children = (
+				CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */,
+				CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */,
+				CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */,
+				CED455751AA46AB8005EE426 /* AGMappingTestcase.h */,
+				CED455761AA46AB8005EE426 /* AGMappingTestcase.m */,
+				CED455781AA49FC7005EE426 /* AGMappingPairObjectTests.m */,
+				CED4557C1AA59639005EE426 /* AGMappingPairCollectionTests.m */,
+				CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */,
+				CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */,
+				CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */,
+			);
+			name = AGMappingPairTests;
+			sourceTree = "<group>";
+		};
+		CED4558C1AA60055005EE426 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CED4556C1AA453D3005EE426 /* AGMock.h */,
+				CED4556D1AA453D3005EE426 /* AGMock.m */,
+				CED455901AA6041A005EE426 /* AGInvalidMapKeyToMock.h */,
+				CED455911AA6041A005EE426 /* AGInvalidMapKeyToMock.m */,
+				CED455931AA605BC005EE426 /* AGInvalidMapKeyFromMock.h */,
+				CED455941AA605BC005EE426 /* AGInvalidMapKeyFromMock.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,11 +509,15 @@
 				CED455721AA467FE005EE426 /* AGMappingPairStringTests.m in Sources */,
 				CED4555C1AA43A8C005EE426 /* AGMappingPairDateTests.m in Sources */,
 				CED455831AA5BEE8005EE426 /* AGMappingPairTests.m in Sources */,
+				CED455871AA5EF75005EE426 /* AGMappingManagerTests.m in Sources */,
 				CED455701AA45DD5005EE426 /* AGMappingPairNumberTests.m in Sources */,
-				CED4556E1AA453D3005EE426 /* AGMyClass.m in Sources */,
+				CED4556E1AA453D3005EE426 /* AGMock.m in Sources */,
+				CED4558B1AA5F694005EE426 /* AGMappingTestsHelper.m in Sources */,
 				CED4557D1AA59639005EE426 /* AGMappingPairCollectionTests.m in Sources */,
+				CED455951AA605BC005EE426 /* AGInvalidMapKeyFromMock.m in Sources */,
 				CED4557F1AA5B0AD005EE426 /* AGMappingPairArrayTests.m in Sources */,
 				CED455851AA5DBE4005EE426 /* AGMappingPairBuilderTests.m in Sources */,
+				CED455921AA6041A005EE426 /* AGInvalidMapKeyToMock.m in Sources */,
 				BA96027E1A8239D8004D7ABD /* AGMappingExamplesTests.m in Sources */,
 				CED455791AA49FC7005EE426 /* AGMappingPairObjectTests.m in Sources */,
 			);

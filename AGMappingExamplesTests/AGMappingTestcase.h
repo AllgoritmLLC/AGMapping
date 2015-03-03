@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "AGMyClass.h"
+#import "AGMock.h"
 
 @interface AGMappingTestcase : XCTestCase
--(AGMyClass *) createTestObj;
+-(AGMock *) createTestObj;
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "AGMyClass.h"
+#import "AGMock.h"
 #import "AGMappingTestcase.h"
 #import "AGMappingPairArray.h"
 
@@ -29,7 +29,7 @@
 }
 
 - (void)testThatItMapsArrayToArray {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{
                                    @"array": @[@(1), @(2)]
@@ -45,7 +45,7 @@
 }
 
 - (void)testThatItMapsUndefinedToNil {
-    AGMyClass *obj = [self createTestObj];
+    AGMock *obj = [self createTestObj];
     NSDictionary *dict = @{
                            @"someField": @{}
                            };
