@@ -91,15 +91,15 @@
         }
 
     }else if ([keyToPropertyType isEqualToString:@"NSArray"]) {
-        if (params[kAGMappingClassNameKey]) {
-            pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
-                                                            keyTo:keyTo
-                                                   entryClassName:params[kAGMappingClassNameKey]];
-        }else if (params[kAGMappingClassNameKey] && params[kAGMappingDateFormatKey]) {
+        if (params[kAGMappingClassNameKey] && params[kAGMappingDateFormatKey]) {
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
                                                             keyTo:keyTo
                                                    entryClassName:params[kAGMappingClassNameKey]
                                                    entryClassInfo:params[kAGMappingDateFormatKey]];
+        }else if (params[kAGMappingClassNameKey]) {
+            pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
+                                                            keyTo:keyTo
+                                                   entryClassName:params[kAGMappingClassNameKey]];
             
         }else{
             pair = [AGMappingPairArray mappingPairWithKeyPathFrom:keyPathFrom
