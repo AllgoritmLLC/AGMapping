@@ -33,6 +33,16 @@
 		BAC8C9651A83AE9200F99897 /* AGMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C9641A83AE9200F99897 /* AGMovie.m */; };
 		BAC8C9681A83AF0100F99897 /* AGMovieGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */; };
 		BAC8C96B1A83B00000F99897 /* AGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC8C96A1A83B00000F99897 /* AGPerson.m */; };
+		CED4555C1AA43A8C005EE426 /* AGMappingPairDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */; };
+		CED4556E1AA453D3005EE426 /* AGMyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4556D1AA453D3005EE426 /* AGMyClass.m */; };
+		CED455701AA45DD5005EE426 /* AGMappingPairNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */; };
+		CED455721AA467FE005EE426 /* AGMappingPairStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */; };
+		CED455771AA46AB8005EE426 /* AGMappingTestcase.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455761AA46AB8005EE426 /* AGMappingTestcase.m */; };
+		CED455791AA49FC7005EE426 /* AGMappingPairObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455781AA49FC7005EE426 /* AGMappingPairObjectTests.m */; };
+		CED4557D1AA59639005EE426 /* AGMappingPairCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4557C1AA59639005EE426 /* AGMappingPairCollectionTests.m */; };
+		CED4557F1AA5B0AD005EE426 /* AGMappingPairArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */; };
+		CED455831AA5BEE8005EE426 /* AGMappingPairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */; };
+		CED455851AA5DBE4005EE426 /* AGMappingPairBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +110,18 @@
 		BAC8C9671A83AF0100F99897 /* AGMovieGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieGenre.m; sourceTree = "<group>"; };
 		BAC8C9691A83B00000F99897 /* AGPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPerson.h; sourceTree = "<group>"; };
 		BAC8C96A1A83B00000F99897 /* AGPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPerson.m; sourceTree = "<group>"; };
+		CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairDateTests.m; sourceTree = "<group>"; };
+		CED4556C1AA453D3005EE426 /* AGMyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMyClass.h; sourceTree = "<group>"; };
+		CED4556D1AA453D3005EE426 /* AGMyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMyClass.m; sourceTree = "<group>"; };
+		CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairNumberTests.m; sourceTree = "<group>"; };
+		CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairStringTests.m; sourceTree = "<group>"; };
+		CED455751AA46AB8005EE426 /* AGMappingTestcase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMappingTestcase.h; sourceTree = "<group>"; };
+		CED455761AA46AB8005EE426 /* AGMappingTestcase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingTestcase.m; sourceTree = "<group>"; };
+		CED455781AA49FC7005EE426 /* AGMappingPairObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairObjectTests.m; sourceTree = "<group>"; };
+		CED4557C1AA59639005EE426 /* AGMappingPairCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairCollectionTests.m; sourceTree = "<group>"; };
+		CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairArrayTests.m; sourceTree = "<group>"; };
+		CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairTests.m; sourceTree = "<group>"; };
+		CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMappingPairBuilderTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +189,20 @@
 		BA96027A1A8239D8004D7ABD /* AGMappingExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */,
 				BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */,
 				BA96027B1A8239D8004D7ABD /* Supporting Files */,
+				CED4556C1AA453D3005EE426 /* AGMyClass.h */,
+				CED4556D1AA453D3005EE426 /* AGMyClass.m */,
+				CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */,
+				CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */,
+				CED455751AA46AB8005EE426 /* AGMappingTestcase.h */,
+				CED455761AA46AB8005EE426 /* AGMappingTestcase.m */,
+				CED455781AA49FC7005EE426 /* AGMappingPairObjectTests.m */,
+				CED4557C1AA59639005EE426 /* AGMappingPairCollectionTests.m */,
+				CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */,
+				CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */,
+				CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */,
 			);
 			path = AGMappingExamplesTests;
 			sourceTree = "<group>";
@@ -437,7 +471,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED455771AA46AB8005EE426 /* AGMappingTestcase.m in Sources */,
+				CED455721AA467FE005EE426 /* AGMappingPairStringTests.m in Sources */,
+				CED4555C1AA43A8C005EE426 /* AGMappingPairDateTests.m in Sources */,
+				CED455831AA5BEE8005EE426 /* AGMappingPairTests.m in Sources */,
+				CED455701AA45DD5005EE426 /* AGMappingPairNumberTests.m in Sources */,
+				CED4556E1AA453D3005EE426 /* AGMyClass.m in Sources */,
+				CED4557D1AA59639005EE426 /* AGMappingPairCollectionTests.m in Sources */,
+				CED4557F1AA5B0AD005EE426 /* AGMappingPairArrayTests.m in Sources */,
+				CED455851AA5DBE4005EE426 /* AGMappingPairBuilderTests.m in Sources */,
 				BA96027E1A8239D8004D7ABD /* AGMappingExamplesTests.m in Sources */,
+				CED455791AA49FC7005EE426 /* AGMappingPairObjectTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
