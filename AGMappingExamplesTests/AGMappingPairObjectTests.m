@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "AGMappingTestcase.h"
+#import "AGMyClass.h"
+#import "AGMappingPairObject.h"
+#import "AGMappingClassNameUndefinedException.h"
 
-@interface AGMappingPairObjectTests : XCTestCase
+@interface AGMappingPairObjectTests : AGMappingTestcase
 
 @end
 
@@ -25,16 +29,42 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+-(void) testThatItMapsObject {
+    AGMyClass *obj = [self createTestObj];
+    AGMappingPairObject *mpObject = [AGMappingPairObject mappingPairWithKeyPathFrom:@"someField.objInner"
+                                                                              keyTo:@"objInner"
+                                                                          className:@"AGMyClass"];
+    AGMyClass *objInner = [self createTestObj];
+    objInner.string = @"1";
+    objInner.number = @(1);
+    NSDictionary *dict = @{
+                              @"someField": @{
+                                      @"objInner": @{
+                                                @"string": @"1",
+                                                @"number": @(1)
+                                              }
+                              }
+                          };
+    [mpObject mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertTrue([obj.objInner.string isEqualToString:objInner.string]);
+    XCTAssertTrue([obj.objInner.number isEqualToNumber:objInner.number]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testThatItMapsUndefinedToNil {
+    AGMyClass *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{}
+                           };
+    AGMappingPairObject *mpObject = [AGMappingPairObject mappingPairWithKeyPathFrom:@"someField.objInner"
+                                                                              keyTo:@"objInner"
+                                                                          className:@"AGMyClass"];
+    [mpObject mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertNil(obj.objInner);
+}
+
+-(void)testThatItTwhrowsExceptionOnInitWithoutClassname {
+    XCTAssertThrowsSpecific([AGMappingPairObject mappingPairWithKeyPathFrom:@"someField.objInner"
+                                                                      keyTo:@"objInner"], AGMappingClassNameUndefinedException);
 }
 
 @end

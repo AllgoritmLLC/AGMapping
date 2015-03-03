@@ -28,7 +28,6 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
@@ -83,6 +82,7 @@
 //    @property (nonatomic, strong) NSArray* cast;
 //    @property (nonatomic, strong) NSDate* releaseDate;
 //    @property (nonatomic, strong) NSArray* countries;
+    
     XCTAssertEqual(movie.identifier, json[@"id"]);
     XCTAssertEqual(movie.urlSmall, json[@"poster"][@"poster_small"]);
     

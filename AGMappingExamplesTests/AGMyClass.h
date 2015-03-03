@@ -10,4 +10,9 @@
 
 @interface AGMyClass : UINavigationItem
 
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSNumber *number;
+@property (nonatomic, strong) NSString *string;
+@property (nonatomic, strong) AGMyClass *objInner;
+
 @end

@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Allgoritm LLC. All rights reserved.
 //
 
-#import "AGMappingTestcase1.h"
+#import "AGMappingTestcase.h"
 
-@implementation AGMappingTestcase1
-
+@implementation AGMappingTestcase
+-(AGMyClass *) createTestObj {
+    return [[AGMyClass alloc] init];
+}
 @end

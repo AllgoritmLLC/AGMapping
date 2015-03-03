@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "AGMyClass.h"
+#import "AGMappingPairString.h"
+#import "AGMappingTestcase.h"
 
-@interface AGMappingPairStringTests : XCTestCase
+@interface AGMappingPairStringTests : AGMappingTestcase
 
 @end
 
@@ -25,16 +28,52 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void) testThatItMapsString {
+    AGMyClass *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{
+                                   @"string": @"123"
+                                   }
+                           };
+    
+    AGMappingPairString *mpString = [AGMappingPairString mappingPairWithKeyPathFrom:@"someField.string"
+                                                                        keyTo:@"string"];
+    
+    [mpString mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertEqual(obj.string, @"123");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void) testThatItMapsUndefinedToNil {
+    AGMyClass *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{}
+                           };
+    AGMappingPairString *mpString = [AGMappingPairString mappingPairWithKeyPathFrom:@"someField.string"
+                                                                              keyTo:@"string"];
+    [mpString mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertNil(obj.string);
 }
+
+- (void) testThatItMapsNullToNil {
+    id smth =[AGMappingPairString objectWithJSONValue:[NSNull null]];
+    XCTAssertNil(smth);
+}
+
+-(void) testThatItMapsObjectToString {
+    AGMyClass *obj = [self createTestObj];
+    AGMyClass *objInner = [self createTestObj];
+    objInner.string = @"1";
+    objInner.number = @(1);
+    NSDictionary *dict = @{
+                           @"someField": @{
+                                        @"string": objInner
+                                   }
+                           };
+    AGMappingPairString *mpString = [AGMappingPairString mappingPairWithKeyPathFrom:@"someField.string"
+                                                                              keyTo:@"string"];
+    [mpString mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertTrue([obj.string isEqualToString:objInner.description]);
+}
+
 
 @end

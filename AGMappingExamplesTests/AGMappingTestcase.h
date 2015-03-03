@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <XCTest/XCTest.h>
+#import "AGMyClass.h"
 
-@interface AGMappingTestcase1 : UINavigationItem
-
+@interface AGMappingTestcase : XCTestCase
+-(AGMyClass *) createTestObj;
 @end

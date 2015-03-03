@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-
-@interface AGMappingPairNumberTests : XCTestCase
+#import "AGMyClass.h"
+#import "AGMappingPairNumber.h"
+#import "AGMappingTestcase.h"
+@interface AGMappingPairNumberTests : AGMappingTestcase
 
 @end
 
@@ -25,16 +27,60 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testThatItMapsNumber {
+    AGMyClass *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{
+                                   @"number": @(123)
+                                   }
+                           };
+    AGMappingPairNumber *mpNumber = [AGMappingPairNumber mappingPairWithKeyPathFrom:@"someField.number"
+                                                                              keyTo:@"number"];
+    [mpNumber mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertEqual(obj.number, @(123));
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testThatItMapsUndefinedToNil {
+    AGMyClass *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{}
+                          };
+    AGMappingPairNumber *mpNumber = [AGMappingPairNumber mappingPairWithKeyPathFrom:@"someField.number"
+                                                                              keyTo:@"number"];
+    [mpNumber mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertNil(obj.number);
+}
+
+- (void) testThatItMapsNullToNil {
+    id smth =[AGMappingPairNumber objectWithJSONValue:[NSNull null]];
+    XCTAssertNil(smth);
+}
+
+
+- (void)testThatItMapsStringToNumber {
+    AGMyClass *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{
+                                            @"number": @"123"
+                                        }
+                           };
+    AGMappingPairNumber *mpNumber = [AGMappingPairNumber mappingPairWithKeyPathFrom:@"someField.number"
+                                                                              keyTo:@"number"];
+    [mpNumber mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertEqual(obj.number, [NSNumber numberWithLong:123]);
+}
+
+- (void)testThatItMapsFloatingPointStringToNumber {
+    AGMyClass *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{
+                                   @"number": @"123.43"
+                                   }
+                           };
+    AGMappingPairNumber *mpNumber = [AGMappingPairNumber mappingPairWithKeyPathFrom:@"someField.number"
+                                                                              keyTo:@"number"];
+    [mpNumber mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertTrue([obj.number isEqualToNumber:@(123.43)]);
 }
 
 @end
