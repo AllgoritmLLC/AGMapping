@@ -83,4 +83,17 @@
     XCTAssertTrue([obj.number isEqualToNumber:@(123.43)]);
 }
 
+-(void) testThatItMapsNotNumericalStringToZero {
+    AGMock *obj = [self createTestObj];
+    NSDictionary *dict = @{
+                           @"someField": @{
+                                   @"number": @"blah"
+                                   }
+                           };
+    AGMappingPairNumber *mpNumber = [AGMappingPairNumber mappingPairWithKeyPathFrom:@"someField.number"
+                                                                              keyTo:@"number"];
+    [mpNumber mapValueFromJSONObject:dict toObject:obj];
+    XCTAssertTrue([obj.number isEqualToNumber:@(0)]);
+}
+
 @end
