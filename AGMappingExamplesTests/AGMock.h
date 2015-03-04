@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AGMock : UINavigationItem
+@interface AGMock : NSObject
 
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSNumber *number;

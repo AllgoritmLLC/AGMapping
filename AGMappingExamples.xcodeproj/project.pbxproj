@@ -47,6 +47,7 @@
 		CED4558B1AA5F694005EE426 /* AGMappingTestsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4558A1AA5F694005EE426 /* AGMappingTestsHelper.m */; };
 		CED455921AA6041A005EE426 /* AGInvalidMapKeyToMock.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455911AA6041A005EE426 /* AGInvalidMapKeyToMock.m */; };
 		CED455951AA605BC005EE426 /* AGInvalidMapKeyFromMock.m in Sources */ = {isa = PBXBuildFile; fileRef = CED455941AA605BC005EE426 /* AGInvalidMapKeyFromMock.m */; };
+		CEDD84811AA6E8E400588F4F /* NSObject+AGMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDD84801AA6E8E400588F4F /* NSObject+AGMappingTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		CED455911AA6041A005EE426 /* AGInvalidMapKeyToMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGInvalidMapKeyToMock.m; sourceTree = "<group>"; };
 		CED455931AA605BC005EE426 /* AGInvalidMapKeyFromMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGInvalidMapKeyFromMock.h; sourceTree = "<group>"; };
 		CED455941AA605BC005EE426 /* AGInvalidMapKeyFromMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGInvalidMapKeyFromMock.m; sourceTree = "<group>"; };
+		CEDD84801AA6E8E400588F4F /* NSObject+AGMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AGMappingTests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,9 @@
 		BA96027A1A8239D8004D7ABD /* AGMappingExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				CED455751AA46AB8005EE426 /* AGMappingTestcase.h */,
+				CED455761AA46AB8005EE426 /* AGMappingTestcase.m */,
+				CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */,
 				CED4558C1AA60055005EE426 /* Mocks */,
 				CED455881AA5F5EB005EE426 /* AGMappingPairTests */,
 				BA96027D1A8239D8004D7ABD /* AGMappingExamplesTests.m */,
@@ -207,6 +212,7 @@
 				CED455861AA5EF75005EE426 /* AGMappingManagerTests.m */,
 				CED455891AA5F694005EE426 /* AGMappingTestsHelper.h */,
 				CED4558A1AA5F694005EE426 /* AGMappingTestsHelper.m */,
+				CEDD84801AA6E8E400588F4F /* NSObject+AGMappingTests.m */,
 			);
 			path = AGMappingExamplesTests;
 			sourceTree = "<group>";
@@ -352,13 +358,10 @@
 				CED4555B1AA43A8C005EE426 /* AGMappingPairDateTests.m */,
 				CED4556F1AA45DD5005EE426 /* AGMappingPairNumberTests.m */,
 				CED455711AA467FE005EE426 /* AGMappingPairStringTests.m */,
-				CED455751AA46AB8005EE426 /* AGMappingTestcase.h */,
-				CED455761AA46AB8005EE426 /* AGMappingTestcase.m */,
 				CED455781AA49FC7005EE426 /* AGMappingPairObjectTests.m */,
 				CED4557C1AA59639005EE426 /* AGMappingPairCollectionTests.m */,
 				CED4557E1AA5B0AD005EE426 /* AGMappingPairArrayTests.m */,
 				CED455821AA5BEE8005EE426 /* AGMappingPairTests.m */,
-				CED455841AA5DBE4005EE426 /* AGMappingPairBuilderTests.m */,
 			);
 			name = AGMappingPairTests;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				CED455851AA5DBE4005EE426 /* AGMappingPairBuilderTests.m in Sources */,
 				CED455921AA6041A005EE426 /* AGInvalidMapKeyToMock.m in Sources */,
 				BA96027E1A8239D8004D7ABD /* AGMappingExamplesTests.m in Sources */,
+				CEDD84811AA6E8E400588F4F /* NSObject+AGMappingTests.m in Sources */,
 				CED455791AA49FC7005EE426 /* AGMappingPairObjectTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
